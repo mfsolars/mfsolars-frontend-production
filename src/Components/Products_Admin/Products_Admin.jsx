@@ -6,6 +6,7 @@ import { AiOutlineClose, AiOutlinePlus, AiOutlineSave } from 'react-icons/ai';
 const Products_Admin = () => {
     const [Products, setProducts] = useState([]);
     const [showForm, setShowForm] = useState(false);
+    const API_URL = import.meta.env.VITE_API_URL;
     const [formData, setFormData] = useState({
         name: '',
         description: '',
@@ -24,7 +25,7 @@ const Products_Admin = () => {
 
     const getProductdata = async () => {
         try {
-            const response = await axios.get('/api/mfsolars/v1/products/all');
+            const response = await axios.get(`${API_URL}/mfsolars/v1/products/all`);
             setProducts(response.data.products);
         } catch (error) {
             console.log(error);
@@ -33,7 +34,7 @@ const Products_Admin = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            await axios.delete(`/api/mfsolars/v1/products/${productId}`);
+            await axios.delete(`${API_URL}/mfsolars/v1/products/${productId}`);
             getProductdata();
         } catch (error) {
             console.log(error);
@@ -55,7 +56,7 @@ const Products_Admin = () => {
 
     const handleSaveChanges = async () => {
         try {
-            await axios.put(`/api/mfsolars/v1/products/${editingProductId}`, formData);
+            await axios.put(`${API_URL}/mfsolars/v1/products/${editingProductId}`, formData);
             getProductdata();
             setEditingProductId(null);
         } catch (error) {
@@ -89,7 +90,7 @@ const Products_Admin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('/api/mfsolars/v1/products/new', formData);
+            await axios.post(`${API_URL}/mfsolars/v1/products/new`, formData);
             getProductdata();
             setShowForm(false);
             setFormData({

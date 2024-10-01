@@ -13,11 +13,12 @@ const MyOrders = () => {
         getOrderdata();
 
     }, []);
+    const API_URL = import.meta.env.VITE_API_URL;
 
 
     const getOrderdata = async () => {
         try {
-            const response = await axios.get('/api/mfsolars/v1/order/orders/me');
+            const response = await axios.get(`${API_URL}/mfsolars/v1/order/orders/me`);
             setOrders(response.data.OrderList);
         } catch (error) {
             console.log(error);

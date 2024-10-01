@@ -6,11 +6,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, loginUser, LogOut } from '../../Store/User Reducers/UserSlice';
 import { toast } from 'react-toastify';
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Login() {
   const dispatch = useDispatch();
   const loggedInUser = useSelector(state => state.user.user);
+  const API_URL = import.meta.env.VITE_API_URL;
 
 
 
@@ -30,7 +31,7 @@ function Login() {
       }
     };
   
-    const url = `/api/mfsolars/v1/auth/${action}`;
+    const url = `${API_URL}/mfsolars/v1/auth/${action}`;
   
     try {
       const response = await axios.post(url, formData, userConfig);
@@ -62,7 +63,7 @@ function Login() {
 
   const handleLogout = async (e) => {
     e.preventDefault();
-    let response = await axios.get("/api/mfsolars/v1/auth/logout");
+    let response = await axios.get(`${API_URL}/mfsolars/v1/auth/logout`);
     if (response.data.success) {
       toast.success(response.data.message);
 
@@ -91,7 +92,7 @@ function Login() {
 
   const requestResetPassword = async () => {
     if (email !== "") {
-      let response = await axios.post("/api/mfsolars/v1/auth/forgetpassword", { email });
+      let response = await axios.post(`${API_URL}/mfsolars/v1/auth/forgetpassword`, { email });
       if (response.data.success) {
         toast.success(response.data.message);
       } else {

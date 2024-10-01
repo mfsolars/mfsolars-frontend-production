@@ -3,14 +3,14 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   server: {
-    host: '0.0.0.0', // Makes Vite listen on all network interfaces for deployment
+    host: '0.0.0.0',
     proxy: {
       '/api': {
-        target: 'https://mfsolars-backend-production.up.railway.app', // Replace with your backend URL in production
+        target: 'http://localhost:4000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''), // Correct the rewrite for /api proxying
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
   plugins: [react()],
-})
+});

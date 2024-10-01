@@ -20,7 +20,7 @@ function TermConditions() {
             <p>
               These terms and conditions outline the rules and regulations for
               the use of Invert Solar’s Website, located at&nbsp;
-              <Link to="https://invertsolar.co.za/">www.invertsolar.co.za</Link>.
+              <Link to="https://mfsolars.com/">www.mfsolars.com</Link>.
             </p>
             <p>
               By accessing this website we assume you accept these terms and

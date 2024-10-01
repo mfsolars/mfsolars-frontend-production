@@ -11,10 +11,11 @@ function Product_Page() {
     const iflogged = useSelector(state=>state.user.user?.userlogged);
 
     const navigate = useNavigate();
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const getSingleProduct = async () => {
         try {
-            const { data } = await axios.get(`/api/mfsolars/v1/products/${id}`);
+            const { data } = await axios.get(`${API_URL}/mfsolars/v1/products/${id}`);
             if (data) {
                 setProduct(data.product);
             } else {
@@ -43,7 +44,7 @@ function Product_Page() {
                         'Content-Type': 'application/json',
                     }
                 };
-                const response = await axios.post("/api/mfsolars/v1/product/cart", { product: product._id }, userConfig);
+                const response = await axios.post(`${API_URL}/mfsolars/v1/product/cart`, { product: product._id }, userConfig);
                 if (response && response.data) {
                     toast.success(`${product.name} added to your cart`);
                     return response.data;

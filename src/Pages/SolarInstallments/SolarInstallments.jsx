@@ -26,7 +26,7 @@ function SolarInstallments() {
     const [Phone, setPhone] = useState("");
     const [Message, setMessage] = useState("");
     const [Address, setAddress] = useState("");
-  
+    const API_URL = import.meta.env.VITE_API_URL;
     const handleSubmit = async (e) => {
       e.preventDefault();
       const formData = new FormData();
@@ -43,7 +43,7 @@ function SolarInstallments() {
         }
       };
   
-      const url = "/api/mfsolars/v1/installation";
+      const url = `${API_URL}/mfsolars/v1/installation`;
       response = await axios.post(url, formData, userConfig);
   
       if (response.data.success) {

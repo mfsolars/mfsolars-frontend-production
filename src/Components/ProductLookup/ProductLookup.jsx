@@ -8,10 +8,11 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 function ProductLookup() {
 
     const [Products, setProducts] = useState([]);
+    const API_URL = import.meta.env.VITE_API_URL;
 
 
     const getDepartment = async () => {
-        const { data } = await axios.get(`/api/mfsolars/v1/products?category=solar-accessories`);
+        const { data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=solar-accessories`);
         if (data) {
             setProducts(data?.products);
         }

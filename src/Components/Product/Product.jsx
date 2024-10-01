@@ -24,7 +24,7 @@ function Product({ wishlist, product, setWishListItems }) {
                         'Content-Type': 'application/json',
                     }
                 };
-                let response = await axios.post("/api/mfsolars/v1/product/cart", { product: id }, userConfig);
+                let response = await axios.post(`${API_URL}/mfsolars/v1/product/cart", { product: id }, userConfig);
                 if (response && response.data) {
                     toast.success(pname + " added to your cart");
                     return response.data;
@@ -48,7 +48,7 @@ function Product({ wishlist, product, setWishListItems }) {
                     'Content-Type': 'application/json',
                 }
             };
-            let response = await axios.post("/api/mfsolars/v1/product/wishlist", { product: id }, userConfig);
+            let response = await axios.post(`${API_URL}/mfsolars/v1/product/wishlist", { product: id }, userConfig);
             if (response && response.data) {
                 toast.success(pname + "added to your wishlist");
                 setWishListItems(prevItems => [...prevItems, response.data]);
@@ -73,7 +73,7 @@ function Product({ wishlist, product, setWishListItems }) {
                     },
                     data: { product: id }
                 };
-                let response = await axios.delete("/api/mfsolars/v1/product/wishlist", userConfig);
+                let response = await axios.delete(`${API_URL}/mfsolars/v1/product/wishlist", userConfig);
                 if (response && response.data) {
                     toast.success(pname + " removed from your wishlist");
                     setWishListItems(prevItems => prevItems.filter(item => item._id !== id));

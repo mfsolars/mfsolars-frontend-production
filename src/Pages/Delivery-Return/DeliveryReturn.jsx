@@ -143,7 +143,7 @@ function DeliveryReturn() {
                                               <strong>
                                                 Notification Period:
                                               </strong>{" "}
-                                              Please notify InvertSolar of your
+                                              Please notify MFTraders of your
                                               intent to return an item within 7
                                               days of receiving your purchase.
                                             </p>

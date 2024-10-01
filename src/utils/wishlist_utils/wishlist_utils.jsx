@@ -1,7 +1,7 @@
 // wishlistUtils.js
 import axios from "axios";
 export const getWishlist = async() => {
-    let response =  await axios.get("/api/mfsolars/v1/product/wishlist");
+    let response =  await axios.get(`${API_URL}/mfsolars/v1/product/wishlist");
     return response.data.wishlist;
 };
 

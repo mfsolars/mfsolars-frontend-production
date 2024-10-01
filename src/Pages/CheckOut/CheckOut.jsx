@@ -29,6 +29,7 @@ function CheckOut() {
   const [pincode, setPincode] = useState("");
   const [state, setState] = useState("");
   const [total, setTotal] = useState(0);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [reftoken, setRefToken] = useState("");
 
@@ -138,7 +139,7 @@ async function submintHandler(e) {
 
     try {
       // Step 1: Initiate payment and get the authorization URL
-      const { data } = await axios.post("/api/mfsolars/v1/payment", PaymentData, configuration);
+      const { data } = await axios.post(`${API_URL}/mfsolars/v1/payment`, PaymentData, configuration);
 
       // Redirect the user to Paystack (or another payment processor)
       window.location.href = data.authorization_url;
@@ -190,7 +191,7 @@ function getTokenFromUrl(url) {
 
   const ProcessOrder = async (orderData, userConfig) => {
     try {
-        const url = "/api/mfsolars/v1/order/create";
+        const url = `${API_URL}/mfsolars/v1/order/create`;
         const response = await axios.post(url, orderData, userConfig);
         console.log("API Response:", response.data);
 

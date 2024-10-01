@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 
 function Cart({ setShowCart }) {
+    const API_URL = import.meta.env.VITE_API_URL;
     const [cartItems, setCartItems] = useState([]);
     const [total, setTotal] = useState(0);
     const login_user = useSelector(state => state.user.user?.userlogged);
@@ -18,7 +19,7 @@ function Cart({ setShowCart }) {
                     'Content-Type': 'application/json',
                 }
             };
-            let response = await axios.delete("/api/mfsolars/v1/product/cart", { data: { product: id } }, userConfig);
+            let response = await axios.delete(`${API_URL}/mfsolars/v1/product/cart`, { data: { product: id } }, userConfig);
             if (response && response.data) {
                 toast.success("Item removed from your cart");
 
@@ -36,7 +37,7 @@ function Cart({ setShowCart }) {
 
     const getCartItems = async () => {
         try {
-            let response = await axios.get("/api/mfsolars/v1/product/cart");
+            let response = await axios.get(`${API_URL}/mfsolars/v1/product/cart`);
             if (response && response.data) {
                 const items = response.data.cart;
                 console.log("Cart items:", items);

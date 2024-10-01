@@ -17,6 +17,7 @@ function ContactUs() {
   const Email = useSelector(state => state.user.user?.userlogged?.email || "");
   const [Phone, setPhone] = useState("");
   const [Message, setMessage] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,7 +39,7 @@ function ContactUs() {
       }
     };
 
-    const url = "/api/mfsolars/v1/contact";
+    const url = `${API_URL}/mfsolars/v1/contact`;
     response = await axios.post(url, formData, userConfig);
 
     if (response.data.success) {
@@ -458,7 +459,7 @@ function ContactUs() {
                                   style={{display:"flex",justifyContent:"center"}}>
                                     <Link
                                       rel="noopener noreferrer nofollow"
-                                      to="https://www.facebook.com/sharer/sharer.php?u=https://invertsolar.co.za/contact"
+                                      to="https://www.facebook.com/sharer/sharer.php?u=https://mfsolars.com/contact"
                                       target="_blank"
                                       className=" wd-social-icon social-facebook"
                                       aria-label="Facebook social link"
@@ -468,7 +469,7 @@ function ContactUs() {
                                     </Link>
                                     <Link
                                       rel="noopener noreferrer nofollow"
-                                      to="https://twitter.com/share?url=https://invertsolar.co.za/contact"
+                                      to="https://twitter.com/share?url=https://mfsolars.com/contact"
                                       target="_blank"
                                       className=" wd-social-icon social-twitter"
                                       aria-label="Twitter social link"
@@ -478,7 +479,7 @@ function ContactUs() {
                                     </Link>
                                     <Link
                                       rel="noopener noreferrer nofollow"
-                                      to="https://pinterest.com/pin/create/button/?url=https://invertsolar.co.za/contact&media=https://invertsolar.co.za/wp-includes/images/media/default.svg&description=Contact+us"
+                                      to="https://pinterest.com/pin/create/button/?url=https://mfsolars.com/contact"
                                       target="_blank"
                                       className=" wd-social-icon social-pinterest"
                                       aria-label="Pinterest social link"
@@ -488,7 +489,7 @@ function ContactUs() {
                                     </Link>
                                     <Link
                                       rel="noopener noreferrer nofollow"
-                                      to="https://www.linkedin.com/shareArticle?mini=true&url=https://invertsolar.co.za/contact"
+                                      to="https://www.linkedin.com/shareArticle?mini=true&url=https://mfsolars.com/contact"
                                       target="_blank"
                                       className=" wd-social-icon social-linkedin"
                                       aria-label="Linkedin social link"
@@ -498,7 +499,7 @@ function ContactUs() {
                                     </Link>
                                     <Link
                                       rel="noopener noreferrer nofollow"
-                                      to="https://telegram.me/share/url?url=https://invertsolar.co.za/contact"
+                                      to="https://telegram.me/share/url?url=https://mfsolars.com/contact"
                                       target="_blank"
                                       className=" wd-social-icon social-tg"
                                       aria-label="Telegram social link"

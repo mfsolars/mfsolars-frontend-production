@@ -10,10 +10,11 @@ function WishList() {
     const department = "YOUR PRODUCTS WISHLIST";
     const [wishListItems, setWishListItems] = useState([]);
     const ActiveUser = useSelector(state => state.user.user);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const getWishlistItems = async () => {
         try {
-            let response = await axios.get("/api/mfsolars/v1/product/wishlist");
+            let response = await axios.get(`${API_URL}/mfsolars/v1/product/wishlist`);
             if (response) {
                 return response.data.wishlist;
             } else {

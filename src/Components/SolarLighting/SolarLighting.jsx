@@ -9,10 +9,11 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 function SolarLighting({ department, moreproducts }) {
 
     const [Products, setProducts] = useState([]);
+    const API_URL = import.meta.env.VITE_API_URL;
 
 
     const getDepartment = async() => {
-        const {data } = await axios.get(`/api/mfsolars/v1/products?category=${department}`);
+        const {data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=${department}`);
         if (data) {
             setProducts(data?.products);
         }

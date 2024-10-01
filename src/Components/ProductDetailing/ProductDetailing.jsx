@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { useEffect,useState } from "react";
 import axios from "axios";
 function ProductDetailing() {
-        const id = "66b1ab79b696bd67aa456af2";
         const [product, setProduct] = useState({});
+        const API_URL = import.meta.env.VITE_API_URL;
     const getSingleProduct = async () => {
-        const {data } = await axios.get(`/api/mfsolars/v1/products?category=inverter`);
+        const {data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=inverter`);
         if (data) {
             setProduct(data?.products[0]);
         }

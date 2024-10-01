@@ -9,13 +9,14 @@ const ResetPassword = () => {
   const navigate = useNavigate();
   const { token } = useParams();  // useParams ka use kara ga
   const [confirmPassword, setConfirmPassword] = useState('');
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       console.log(token);
       
-      let { data } = await axios.put(`http://localhost:4000/api/mfsolars/v1/auth/resetpassword/${token}`, {
+      let { data } = await axios.put(`${API_URL}/mfsolars/v1/auth/resetpassword/${token}`, {
         password, confirmPassword
       });
   

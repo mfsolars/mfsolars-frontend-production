@@ -13,7 +13,7 @@ function ProductPageProduct({ product }) {
                     'Content-Type': 'application/json',
                 }
             };
-            let response = await axios.post("/api/mfsolars/v1/product/cart", { product: id}, userConfig);
+            let response = await axios.post(`${API_URL}/mfsolars/v1/product/cart", { product: id}, userConfig);
             if (response && response.data) {
                 toast.success(product?.name + " added to your cart");
                 return response.data;
@@ -33,7 +33,7 @@ function ProductPageProduct({ product }) {
                     'Content-Type': 'application/json',
                 }
             };
-            let response = await axios.post("/api/mfsolars/v1/product/wishlist", { product: id }, userConfig);
+            let response = await axios.post(`${API_URL}/mfsolars/v1/product/wishlist", { product: id }, userConfig);
             if (response && response.data) {
                 toast.success(product?.name + " added to your wishlist");
                 return response.data;
