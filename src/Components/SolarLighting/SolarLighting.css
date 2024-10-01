@@ -1,0 +1,1085 @@
+@font-face { 
+    font-display:swap;
+    font-weight:400;
+    font-style:normal;
+    font-family:"woodmart-font";
+    src:url(/wp-content/themes/woodmart/fonts/woodmart-font-2-400.woff2?v=7.2.3) format("woff2");
+  } 
+  @media all{     
+    body {  
+      font:inherit;
+      font-size:100%;
+      color:var(--wd-solarlight-text-color);
+      font-weight:var(--wd-solarlight-text-font-weight);
+      font-style:var(--wd-solarlight-text-font-style);
+      font-family:sans-serif;
+      line-height:1;
+    }  
+  }  
+  body { 
+  /* CSS Variables that may have been missed get put on body */ 
+      --flex-direction:  initial;  
+      --flex-wrap:  initial;  
+      --justify-content:  initial;  
+      --align-items:  initial;  
+      --align-content:  initial;  
+      --gap:  initial;  
+      --flex-basis:  initial;  
+      --flex-grow:  initial;  
+      --flex-shrink:  initial;  
+      --order:  initial;  
+      --align-self:  initial;  
+      --text-align:  left;  
+      --wd-solarlight-sp:  .001px; 
+      --wd-solarlight-sp:  20px; 
+      --title-line-count:  1;  
+      --title-line-height:  18px; 
+      --bgcolor-gray-100: #f7f7f7; 
+      --wd-solarlight-prod-bg:  var(--bgcolor-gray-100); 
+      --wd-solarlight-prod-bg:  #FFFFFF;  
+      --text-align:  center; 
+      --text-align:  start !important;  
+      --wd-solarlight-prod-bg:  var(--bgcolor-gray-100); 
+      --wd-solarlight-prod-bg:  #FFFFFF;  
+      --color-gray-800: #333; 
+      --action-btn-color:  var(--color-gray-800);  
+      --color-gray-500: #777; 
+      --action-btn-hover-color:  var(--color-gray-500); 
+  } 
+  
+  @media all{ 
+    * { 
+      -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+    } 
+  
+    div { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    body { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    body { 
+      margin: 0; 
+      background-color: #fff; 
+      color: var(--wd-solarlight-text-color); 
+      text-rendering: optimizeLegibility; 
+      font-weight: var(--wd-solarlight-text-font-weight); 
+      font-style: var(--wd-solarlight-text-font-style); 
+      font-size: var(--wd-solarlight-text-font-size); 
+      font-family: var(--wd-solarlight-text-font); 
+      -webkit-font-smoothing: antialiased; 
+      -moz-osx-font-smoothing: grayscale; 
+      line-height: var(--wd-solarlight-text-line-height); 
+      --wd-solarlight-header-h: calc(var(--wd-solarlight-top-bar-h) + var(--wd-solarlight-header-general-h) + var(--wd-solarlight-header-bottom-h)); 
+      --wd-solarlight-header-sticky-h: calc(var(--wd-solarlight-top-bar-sticky-h) + var(--wd-solarlight-header-general-sticky-h) + var(--wd-solarlight-header-bottom-sticky-h) + var(--wd-solarlight-header-clone-h));
+    } 
+  
+    body { 
+      overflow: clip;
+    } 
+  
+    html { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    html { 
+      line-height: 1; 
+      -webkit-text-size-adjust: 100%; 
+      -webkit-tap-highlight-color: transparent; 
+      font-family: sans-serif; 
+      overflow-x: hidden;
+    } 
+  
+    :root { 
+      --wd-solarlight-text-line-height: 1.6; 
+      --wd-solarlight-brd-radius: .001px; 
+      --btn-height: 42px; 
+      --btn-transform: uppercase; 
+      --btn-font-weight: 600; 
+      --btn-font-family: inherit; 
+      --btn-font-style: unset; 
+      --wd-solarlight-main-bgcolor: #fff; 
+      --wd-solarlight-scroll-w: .001px; 
+      --wd-solarlight-tags-mb: 20px; 
+      --wd-solarlight-sticky-nav-w: .001px; 
+      --color-gray-300: #bbb; 
+      --color-gray-400: #a5a5a5; 
+      --color-gray-500: #777; 
+      --color-gray-800: #333; 
+      --color-gray-900: #242424; 
+      --bgcolor-white: #fff; 
+      --bgcolor-gray-100: #f7f7f7; 
+    } 
+  
+    :root { 
+      --wd-solarlight-top-bar-h: 0.001px; 
+      --wd-solarlight-top-bar-sticky-h: 0.001px; 
+      --wd-solarlight-header-general-h: 80px; 
+      --wd-solarlight-header-general-sticky-h: 0.001px; 
+      --wd-solarlight-header-bottom-h: 60px; 
+      --wd-solarlight-header-bottom-sticky-h: 60px; 
+      --wd-solarlight-header-clone-h: 0.001px;
+    } 
+  
+    :root { 
+      --wd-solarlight-text-font: "Open Sans", Arial, Helvetica, sans-serif; 
+      --wd-solarlight-text-font-weight: 400; 
+      --wd-solarlight-text-color: rgb(0,0,0); 
+      --wd-solarlight-text-font-size: 15px;
+    } 
+  
+    :root { 
+      --wd-solarlight-title-font: "Lexend Deca", Arial, Helvetica, sans-serif; 
+      --wd-solarlight-title-font-weight: 500; 
+      --wd-solarlight-title-color: #242424;
+    } 
+  
+    :root { 
+      --wd-solarlight-entities-title-font: "Lexend Deca", Arial, Helvetica, sans-serif; 
+      --wd-solarlight-entities-title-font-weight: 500; 
+      --wd-solarlight-entities-title-color: #333333; 
+      --wd-solarlight-entities-title-color-hover: rgb(0, 0, 0);
+    } 
+  
+    :root { 
+      --wd-solarlight-brd-radius: 10px;
+    } 
+  
+    :root { 
+      --wd-solarlight-primary-color: #029ef6;
+    } 
+  
+    :root { 
+      --wd-solarlight-link-color: #333333; 
+      --wd-solarlight-link-color-hover: #242424;
+    } 
+  
+    :root { 
+      --btn-accented-bgcolor: #029ef6;
+    } 
+  
+    :root { 
+      --btn-accented-bgcolor-hover: #029ef6;
+    } 
+  
+    :root { 
+      --btn-transform: capitalize;
+    } 
+  
+    :root { 
+      --btn-accented-color: #fff; 
+      --btn-accented-color-hover: #fff; 
+      --btn-accented-brd-radius: 5px; 
+      --btn-accented-box-shadow: none; 
+      --btn-accented-box-shadow-hover: none; 
+    } 
+  
+    :root { 
+      --wd-solarlight-container-w: 1400px;
+    } 
+  
+    *,:before,:after { 
+      -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+    } 
+  
+    *  { 
+      box-sizing: border-box;
+    } 
+  
+    .elementor-widget-wrap { 
+      position: relative; 
+      width: 100%; 
+      flex-wrap: wrap; 
+      align-content: flex-start;
+    } 
+  
+    .elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap  { 
+      display: flex;
+    } 
+  
+    .elementor-column-gap-default > .elementor-column > .elementor-element-populated { 
+      padding: 10px;
+    } 
+  
+    .elementor-14 .elementor-element.elementor-element-d481a1a.elementor-column > .elementor-widget-wrap { 
+      justify-content: space-between;
+    } 
+  
+    .elementor-14 .elementor-element.elementor-element-d481a1a.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated { 
+      align-content: center; 
+      align-items: center;
+    } 
+  
+    .elementor-element { 
+      --flex-direction: initial; 
+      --flex-wrap: initial; 
+      --justify-content: initial; 
+      --align-items: initial; 
+      --align-content: initial; 
+      --gap: initial; 
+      --flex-basis: initial; 
+      --flex-grow: initial; 
+      --flex-shrink: initial; 
+      --order: initial; 
+      --align-self: initial; 
+      flex-basis: var(--flex-basis); 
+      flex-grow: var(--flex-grow); 
+      flex-shrink: var(--flex-shrink); 
+      order: var(--order); 
+      align-self: var(--align-self);
+    } 
+  
+    .row { 
+      display: flex; 
+      flex-wrap: wrap; 
+      margin-right: -15px; 
+      margin-left: -15px;
+    } 
+  
+    .align-items-start { 
+      align-items: flex-start!important;
+    } 
+  
+    .elementor-element:where(.e-con-full, .elementor-widget) { 
+      flex-direction: var(--flex-direction); 
+      flex-wrap: var(--flex-wrap); 
+      justify-content: var(--justify-content); 
+      align-items: var(--align-items); 
+      align-content: var(--align-content); 
+      gap: var(--gap);
+    } 
+  
+    .elementor-widget { 
+      position: relative;
+    } 
+  
+    .elementor-widget-wrap > .elementor-element  { 
+      width: 100%;
+    } 
+  
+    .elementor-widget:not(:last-child) { 
+      margin-bottom: 20px;
+    } 
+  
+    .elementor-widget:not(:last-child) { 
+      margin-block-end: 20px;
+    } 
+  
+    .elementor-element.elementor-widget__width-auto  { 
+      max-width: 100%;
+    } 
+  
+    .elementor-widget:not(:last-child).elementor-widget__width-auto { 
+      margin-bottom: 0;
+    } 
+  
+    .elementor-element.elementor-element-31f0652  { 
+      width: auto; 
+      max-width: auto;
+    } 
+  
+    * , .elementor ::after, .elementor ::before { 
+      box-sizing: border-box;
+    } 
+  
+    .elementor *, .elementor ::after, .elementor ::before { 
+      box-sizing: border-box;
+    } 
+  
+    .elementor-element .elementor-widget-container  { 
+      transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s);
+    } 
+  
+    .elementor-element.elementor-element-31f0652 > .elementor-widget-container  { 
+      margin: 0 0 20px 0;
+    } 
+  
+    .text-left { 
+      --text-align: left; 
+      text-align: left; 
+    } 
+  
+    a { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    a { 
+      touch-action: manipulation;
+    } 
+  
+    a { 
+      color: var(--wd-solarlight-link-color); 
+      text-decoration: none; 
+      transition: all .25s ease;
+    } 
+  
+    :is(.btn, .button, button, [type="submit"], [type="button"]) { 
+      padding: 5px 20px; 
+      min-height: var(--btn-height); 
+      font-size: 13px; 
+      position: relative; 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      outline: none; 
+      border: 0px solid transparent; 
+      border-radius: 0; 
+      box-shadow: none; 
+      vertical-align: middle; 
+      text-align: center; 
+      text-decoration: none; 
+      text-transform: var(--btn-transform); 
+      text-shadow: none; 
+      font-weight: var(--btn-font-weight); 
+      font-family: var(--btn-font-family); 
+      font-style: var(--btn-font-style); 
+      line-height: 1.2; 
+      cursor: pointer; 
+      transition: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, opacity .25s ease; 
+      color: var(--btn-color, #3E3E3E); 
+      background-color: var(--btn-bgcolor, #F3F3F3);
+    } 
+  
+    .btn-icon-pos-right { 
+      flex-direction: row;
+    } 
+  
+    .elementor a { 
+      box-shadow: none; 
+      text-decoration: none;
+    } 
+  
+    .btn.btn-style-round { 
+      border-radius: 35px;
+    } 
+  
+    .elementor-element.elementor-element-31f0652 .wd-solarlight-button-wrapper a  { 
+      background-color: #E1EBFF; 
+      border-color: #E1EBFF; 
+      color: #1C61E7;
+    } 
+  
+    a:is(:hover, :focus, :active) { 
+      outline: none; 
+      text-decoration: none;
+    } 
+  
+    a:hover { 
+      color: var(--wd-solarlight-link-color-hover);
+    } 
+  
+    :is(.btn, .button, button, [type="submit"], [type="button"]):hover { 
+      color: var(--btn-color-hover, #3E3E3E); 
+      background-color: var(--btn-bgcolor-hover, #e0e0e0);
+    } 
+  
+    .elementor-14 .elementor-element.elementor-element-31f0652 .wd-solarlight-button-wrapper:hover a { 
+      background-color: #DBE3F9; 
+      border-color: #DBE3F9; 
+      color: #1C61E7;
+    } 
+  
+    [class*="wd-solarlight-spacing-"] { 
+      margin-right: calc((var(--wd-solarlight-sp) / 2) * -1); 
+      margin-left: calc((var(--wd-solarlight-sp) / 2) * -1); 
+      --wd-solarlight-sp: .001px;
+    } 
+  
+    .wd-solarlight-spacing-20 { 
+      --wd-solarlight-sp: 20px;
+    } 
+  
+    [class*="title-line-"] { 
+      --title-line-count: 1; 
+      --title-line-height: 18px;
+    } 
+  
+    .wd-solarlight-products-with-bg { 
+      --wd-solarlight-prod-bg: var(--bgcolor-gray-100);
+    } 
+  
+    [class*="wd-solarlight-spacing-"]  { 
+      margin-bottom: calc(var(--wd-solarlight-sp) * -1);
+    } 
+  }     
+  
+  @media (min-width: 1025px){ 
+    .products.wd-solarlight-stretch-cont-lg { 
+      align-items: stretch !important;
+    } 
+  }     
+  
+  @media all{ 
+    .elementor-element.elementor-element-64427e1 .wd-solarlight-products-with-bg  { 
+      --wd-solarlight-prod-bg: #FFFFFF; 
+    } 
+  
+    span { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    .wd-solarlight-btn-icon { 
+      line-height: 1; 
+      margin-left: 5px;
+    } 
+  
+    .col-6,.col-lg-20_0,.col-md-4 { 
+      position: relative; 
+      width: 100%; 
+      min-height: 1px; 
+      padding-right: 15px; 
+      padding-left: 15px;
+    } 
+  
+    .col-6 { 
+      flex: 0 0 50%; 
+      max-width: 50%;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    .col-md-4 { 
+      flex: 0 0 33.333333%; 
+      max-width: 33.333333%;
+    } 
+  }     
+  
+  @media (min-width: 1025px){ 
+    .col-lg-20_0 { 
+      flex: 0 0 20%; 
+      max-width: 20%;
+    } 
+  }     
+  
+  @media all{ 
+    .product-grid-item { 
+      text-align: var(--text-align); 
+      --text-align: center;
+    } 
+  
+    .wd-solarlight-hover-fw-button { 
+      --text-align: start !important; 
+    } 
+  
+    [class*="wd-solarlight-spacing-"] > [class*="col"]  { 
+      margin-bottom: var(--wd-solarlight-sp); 
+      padding-right: calc(var(--wd-solarlight-sp) / 2); 
+      padding-left: calc(var(--wd-solarlight-sp) / 2);
+    } 
+  
+    .wd-solarlight-products-with-bg .product-grid-item  { 
+      --wd-solarlight-prod-bg: var(--bgcolor-gray-100);
+    } 
+  }     
+  
+  @media (min-width: 1025px){ 
+    .products.wd-solarlight-stretch-cont-lg :is(.product, .product-wrapper)  { 
+      display: flex; 
+      flex-direction: column;
+    } 
+  }     
+  
+  @media all{ 
+    .elementor-element.elementor-element-64427e1 .wd-solarlight-products-with-bg .product-grid-item  { 
+      --wd-solarlight-prod-bg: #FFFFFF; 
+    } 
+  
+    img { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    img { 
+      max-width: 100%; 
+      height: auto; 
+      border: 0; 
+      vertical-align: middle;
+    } 
+  
+    a img  { 
+      border: none;
+    } 
+  
+    .elementor img { 
+      height: auto; 
+      max-width: 100%; 
+      border: none; 
+      border-radius: 0; 
+      box-shadow: none;
+    } 
+  
+    .product-grid-item .product-wrapper  { 
+      border-radius: var(--wd-solarlight-brd-radius);
+    } 
+  
+    .wd-solarlight-hover-with-fade .product-wrapper  { 
+      position: relative; 
+      transition: transform .3s ease;
+    } 
+  
+    :is(.products-bordered-grid-ins, .wd-solarlight-products-with-bg:not(.products-bordered-grid), .wd-solarlight-products-with-shadow:not(.products-bordered-grid)) .product-wrapper  { 
+      padding: 15px;
+    } 
+  
+    .products[class*="wd-solarlight-stretch-cont"] .product-wrapper  { 
+      height: 100%;
+    } 
+  
+    .wd-solarlight-products-with-bg:not(.products-bordered-grid) .product-wrapper  { 
+      background-color: var(--wd-solarlight-prod-bg);
+    } 
+  }     
+  
+  .wd-solarlight-products-with-bg:not(.products-bordered-grid) .product-wrapper  { 
+      background-color: var(--wd-solarlight-prod-bg); 
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  } 
+  
+  @media all{ 
+    .wd-solarlight-hover-with-fade.hover-ready:hover .product-wrapper { 
+      z-index: 20; 
+      transform: translateY(-5px) translateZ(0);
+    } 
+  
+    .wd-solarlight-hover-with-fade.hover-ready:hover .product-wrapper, .wd-solarlight-hover-with-fade.hover-ready.state-hover .product-wrapper { 
+      z-index: 20; 
+      transform: translateY(-5px) translateZ(0);
+    } 
+  
+    .wd-solarlight-hover-with-fade .content-product-imagin  { 
+      position: absolute; 
+      top: -15px; 
+      right: -15px; 
+      bottom: 0; 
+      left: -15px; 
+      visibility: hidden; 
+      border: inherit; 
+      border-radius: var(--wd-solarlight-brd-radius); 
+      background-color: var(--wd-solarlight-prod-bg, var(--bgcolor-white)); 
+      box-shadow: 0 0 10px rgba(0,0,0,0.15); 
+      opacity: 0; 
+      transform: scale(0.98);
+    } 
+  
+    :is(.wd-solarlight-products-with-bg, .wd-solarlight-products-with-shadow, .products-bordered-grid-ins) .wd-solarlight-hover-with-fade .content-product-imagin  { 
+      top: -1px; 
+      right: -1px; 
+      left: -1px;
+    } 
+  
+    .wd-solarlight-hover-with-fade.hover-ready:hover .content-product-imagin { 
+      visibility: visible; 
+      opacity: 1; 
+      transition: opacity .3s ease, visibility .0s ease, transform .3s ease; 
+      transform: scale(1);
+    } 
+  
+    .product-element-top { 
+      position: relative; 
+      overflow: hidden; 
+      margin-bottom: 10px; 
+      border-radius: var(--wd-solarlight-brd-radius); 
+      backface-visibility: hidden; 
+      -webkit-backface-visibility: hidden;
+    } 
+  
+    .product-element-top:after { 
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      visibility: hidden; 
+      margin-top: -16px; 
+      margin-left: -16px; 
+      opacity: 0; 
+      transition: opacity .1s ease, visibility .1s ease; 
+      content: ""; 
+      display: inline-block; 
+      width: 32px; 
+      height: 32px; 
+      border: 1px solid rgba(0,0,0,0); 
+      border-left-color: var(--color-gray-900); 
+      border-radius: 50%; 
+      vertical-align: middle;
+    } 
+  
+    .wd-solarlight-hover-with-fade .product-element-bottom  { 
+      position: relative; 
+      backface-visibility: hidden;
+    } 
+  
+    .products[class*="wd-solarlight-stretch-cont"] .product-element-bottom  { 
+      display: flex; 
+      flex-direction: column; 
+      flex: 1 1 auto;
+    } 
+  
+    .wd-solarlight-hover-with-fade.hover-ready:hover .content-product-imagin, .wd-solarlight-hover-with-fade.hover-ready.state-hover .content-product-imagin { 
+      visibility: visible; 
+      opacity: 1; 
+      transition: opacity .3s ease, visibility .0s ease, transform .3s ease; 
+      transform: scale(1);
+    } 
+  
+    .product-grid-item .product-image-link  { 
+      position: relative; 
+      display: block;
+    } 
+  
+    .wd-solarlight-buttons { 
+      z-index: 4; 
+      display: flex; 
+      flex-direction: column; 
+      border-radius: calc(var(--wd-solarlight-brd-radius) / 1.2); 
+      background: var(--bgcolor-white); 
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.1); 
+      transition: all .3s ease;
+    } 
+  
+    .wd-solarlight-buttons.wd-solarlight-pos-r-t { 
+      position: absolute; 
+      top: 10px; 
+      right: 10px;
+    } 
+  
+    .wd-solarlight-buttons[class*="wd-solarlight-pos-r"] { 
+      opacity: 0; 
+      transform: translateX(20px) translateZ(0);
+    } 
+  
+    .product-grid-item:hover .wd-solarlight-buttons[class*="wd-solarlight-pos-r"]  { 
+      opacity: 1; 
+      transform: translateY(0) translateZ(0);
+    } 
+  
+    h3 { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    h3 { 
+      font-size: 22px;
+    } 
+  
+    h3 { 
+      display: block; 
+      margin-bottom: var(--wd-solarlight-tags-mb); 
+      color: var(--wd-solarlight-title-color); 
+      text-transform: var(--wd-solarlight-title-transform); 
+      font-weight: var(--wd-solarlight-title-font-weight); 
+      font-style: var(--wd-solarlight-title-font-style); 
+      font-family: var(--wd-solarlight-title-font); 
+      line-height: 1.4;
+    } 
+  
+    .wd-solarlight-entities-title { 
+      display: block; 
+      color: var(--wd-solarlight-entities-title-color); 
+      word-wrap: break-word; 
+      font-weight: var(--wd-solarlight-entities-title-font-weight); 
+      font-style: var(--wd-solarlight-entities-title-font-style); 
+      font-family: var(--wd-solarlight-entities-title-font); 
+      text-transform: var(--wd-solarlight-entities-title-transform); 
+      line-height: 1.4;
+    } 
+  
+    .product-grid-item :is(.wd-solarlight-entities-title, .wd-solarlight-product-cats, .wd-solarlight-product-brands-links)  { 
+      margin-bottom: 5px; 
+      font-size: inherit;
+    } 
+  
+    [class*="title-line-"] .product-grid-item .wd-solarlight-entities-title  { 
+      overflow: hidden; 
+      max-height: calc(var(--title-line-count) * var(--title-line-height)); 
+      line-height: var(--title-line-height);
+    } 
+  
+    .product-grid-item :is(.star-rating, .wd-solarlight-star-rating, .wd-solarlight-quick-shop-2, .wd-solarlight-swatches-attr, .wd-solarlight-product-stock)  { 
+      margin-bottom: 5px;
+    } 
+  
+    p { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    p { 
+      margin-bottom: var(--wd-solarlight-tags-mb);
+    } 
+  
+    p.stock { 
+      font-weight: 600; 
+      line-height: 1.2;
+    } 
+  
+    p.stock.wd-solarlight-style-default:is(.available-on-backorder, .in-stock) { 
+      color: var(--color-gray-800);
+    } 
+  
+   
+  
+    .wd-solarlight-hover-fw-button .wrap-price  { 
+      display: flex; 
+      align-items: center; 
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+      margin-bottom: -5px;
+    } 
+  
+    .products[class*="wd-solarlight-stretch-cont"] :is(.price, .wrap-price, .product-rating-price)  { 
+      margin-top: auto;
+    } 
+  
+    .wd-solarlight-hover-fw-button .wd-solarlight-add-btn  { 
+      margin-top: 10px; 
+      font-size: 0; 
+      position: relative;
+    } 
+  
+    .wd-solarlight-hover-with-fade .fade-in-block  { 
+      position: absolute; 
+      right: 0; 
+      left: 0; 
+      visibility: hidden; 
+      opacity: 0;
+    } 
+  
+    .wd-solarlight-hover-fw-button .fade-in-block  { 
+      top: 100%; 
+      padding: 10px 0 10px 0;
+    } 
+  
+    :is(.wd-solarlight-products-with-bg, .wd-solarlight-products-with-shadow, .products-bordered-grid-ins) .wd-solarlight-hover-with-fade .fade-in-block  { 
+      padding-bottom: 0;
+    } 
+  
+    .wd-solarlight-hover-with-fade.hover-ready:hover .fade-in-block  { 
+      visibility: visible; 
+      opacity: 1; 
+      transition: opacity .3s ease, visibility .0s ease;
+    } 
+  
+    .product-grid-item :is(.product-image-link, .hover-img) img  { 
+      width: 100%;
+    } 
+  
+    .wd-solarlight-action-btn { 
+      display: inline-flex; 
+      vertical-align: middle; 
+      --action-btn-color: var(--color-gray-800); 
+      --action-btn-hover-color: var(--color-gray-500);
+    } 
+  
+    :is(h1, h2, h3, h4, h5, h6, .title) a  { 
+      color: inherit;
+    } 
+  
+    .wd-solarlight-entities-title a  { 
+      color: inherit;
+    } 
+  
+    :is(h1, h2, h3, h4, h5, h6, .title) a:hover { 
+      color: var(--wd-solarlight-link-color-hover);
+    } 
+  
+     .wd-solarlight-entities-title a:hover { 
+      color: var(--wd-solarlight-entities-title-color-hover);
+    } 
+  
+    .star-rating { 
+      position: relative; 
+      display: inline-block; 
+      vertical-align: middle; 
+      white-space: nowrap; 
+      letter-spacing: 2px; 
+      font-weight: 400; 
+      color: #EABE12; 
+      font-family: "woodmart-font";
+    } 
+  
+    .product-grid-item .wd-solarlight-star-rating .star-rating  { 
+      margin-bottom: 0;
+    } 
+  
+  
+    .price { 
+      color: var(--wd-solarlight-primary-color);
+    } 
+  
+    .product-grid-item .price  { 
+      display: block; 
+      margin-bottom: 0; 
+      line-height: 1.3;
+    } 
+  
+    .wd-solarlight-hover-fw-button .price  { 
+      margin-right: 5px;
+    } 
+  
+    .wd-solarlight-hover-fw-button .wrap-price :is(.price, .wd-solarlight-swatches-attr, .wd-solarlight-quick-shop-2)  { 
+      margin-top: 0 !important; 
+      margin-bottom: 5px;
+    } 
+  
+    .wd-solarlight-add-btn-replace .add-to-cart-loop  { 
+      overflow: hidden; 
+      padding: 0;
+    } 
+  
+    .wd-solarlight-hover-fw-button .wd-solarlight-add-btn > a  { 
+      width: 100%; 
+      border-radius: var(--btn-accented-brd-radius); 
+      color: var(--btn-accented-color); 
+      box-shadow: var(--btn-accented-box-shadow); 
+      background-color: var(--btn-accented-bgcolor); 
+      text-transform: var(--btn-accented-transform, var(--btn-transform)); 
+      font-weight: var(--btn-accented-font-weight, var(--btn-font-weight)); 
+      font-family: var(--btn-accented-font-family, var(--btn-font-family)); 
+      font-style: var(--btn-accented-font-style, var(--btn-font-style));
+    } 
+  
+    .wd-solarlight-add-btn-replace .add-to-cart-loop::before { 
+      position: absolute; 
+      top: 0; 
+      right: 0; 
+      bottom: 0; 
+      left: 0; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: 400; 
+      font-size: 20px; 
+      transition: opacity .15s ease, transform .25s ease; 
+      transform: translateY(100%); 
+      content: "🛒"; 
+      color: aliceblue;
+      background:#1c61e7;
+      font-family: "woodmart-font";
+    } 
+  
+    .wd-solarlight-add-btn-replace .add-to-cart-loop::after { 
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      margin-top: -9px; 
+      margin-left: -9px; 
+      opacity: 0; 
+      transition: opacity .2s ease; 
+      content: ""; 
+      display: inline-block; 
+      width: 18px; 
+      height: 18px; 
+      border: 1px solid rgba(0,0,0,0); 
+      border-left-color: currentColor; 
+      border-radius: 50%; 
+      vertical-align: middle;
+    } 
+  
+    .wd-solarlight-hover-fw-button .wd-solarlight-add-btn > a:hover { 
+      color: var(--btn-accented-color-hover); 
+      box-shadow: var(--btn-accented-box-shadow-hover); 
+      background-color: var(--btn-accented-bgcolor-hover);
+    } 
+  
+    .wd-solarlight-add-btn-replace .add-to-cart-loop:hover::before { 
+      transform: translateY(0) translateZ(0);
+    } 
+  
+    a.wd-solarlight-entities-title:hover, .wd-solarlight-entities-title a:hover { 
+      color: var(--wd-solarlight-entities-title-color-hover);
+    } 
+  
+    .product-grid-item .added_to_cart  { 
+      display: none !important;
+    } 
+  
+    .wd-solarlight-action-btn > a  { 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--action-btn-color); 
+      cursor: pointer;
+    } 
+  
+    .wd-solarlight-action-btn.wd-solarlight-style-icon > a  { 
+      position: relative; 
+      flex-direction: column; 
+      width: 50px; 
+      height: 50px; 
+      font-weight: 400; 
+      font-size: 0 !important; 
+      line-height: 0;
+    } 
+  
+    .wd-solarlight-buttons .wd-solarlight-action-btn > a  { 
+      height: 45px;
+    } 
+  
+    .wd-solarlight-action-btn > a::before { 
+      transition: opacity .15s ease; 
+      font-family: "woodmart-font";
+    } 
+  
+  
+    .wd-solarlight-action-btn.wd-solarlight-style-icon > a::before { 
+      font-size: 20px;
+    } 
+  
+    .wd-solarlight-action-btn > a::after { 
+      position: absolute; 
+      top: calc(50% - .5em); 
+      left: 0; 
+      opacity: 0; 
+      transition: opacity .2s ease; 
+      content: ""; 
+      display: inline-block; 
+      width: 1em; 
+      height: 1em; 
+      border: 1px solid rgba(0,0,0,0); 
+      border-left-color: var(--color-gray-900); 
+      border-radius: 50%; 
+      vertical-align: middle;
+    } 
+  
+    .wd-solarlight-action-btn.wd-solarlight-style-icon > a::after { 
+      left: calc(50% - .5em); 
+      font-size: 18px;
+    } 
+  
+    .wd-solarlight-action-btn > a:hover { 
+      color: var(--action-btn-hover-color);
+    } 
+  
+    .star-rating span  { 
+      position: absolute; 
+      top: 0; 
+      bottom: 0; 
+      left: 0; 
+      overflow: hidden; 
+      width: 100%; 
+      text-indent: 99999px;
+    } 
+  
+  
+    .amount { 
+      color: var(--wd-solarlight-primary-color); 
+      font-weight: 600;
+    } 
+  
+    .price .amount  { 
+      font-size: inherit;
+    } 
+  
+    .wd-solarlight-add-btn-replace .add-to-cart-loop span  { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      min-height: inherit; 
+      transition: transform .25s ease, opacity .15s ease;
+    } 
+  
+    .wd-solarlight-hover-fw-button .wd-solarlight-add-btn .add-to-cart-loop span  { 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      white-space: nowrap; 
+      font-size: 13px;
+    } 
+  
+    .wd-solarlight-add-btn-replace .add-to-cart-loop:hover span { 
+      transform: translateY(-100%) translateZ(0);
+    } 
+  
+    strong { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    strong { 
+      font-weight: 600;
+    } 
+  }     
+  
+  
+  /* These were inline style tags. Uses id+class to override almost everything */
+  #style-OoONl.style-OoONl {  
+     margin-bottom: -9.98843px;  
+  }  
+  #style-kOhJI.style-kOhJI {  
+     display:none;  
+      visibility:hidden;  
+  }  
+  #style-Oa2Ya.style-Oa2Ya {  
+     margin-bottom: -9.98843px;  
+  }  
+  #style-L2lX5.style-L2lX5 {  
+     display:none;  
+      visibility:hidden;  
+  }  
+  #style-L8qPP.style-L8qPP {  
+     margin-bottom: -9.98843px;  
+  }  
+  #style-s3KSl.style-s3KSl {  
+     display:none;  
+      visibility:hidden;  
+  }  
+  #style-OoDgx.style-OoDgx {  
+     margin-bottom: -9.98843px;  
+  }  
+  #style-XlQsM.style-XlQsM {  
+     display:none;  
+      visibility:hidden;  
+  }  
+  #style-qZSc5.style-qZSc5 {  
+     margin-bottom: -9.98843px;  
+  }  
+  #style-6ETys.style-6ETys {  
+     display:none;  
+      visibility:hidden;  
+  }  
+  

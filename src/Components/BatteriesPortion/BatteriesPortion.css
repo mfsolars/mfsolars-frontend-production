@@ -1,0 +1,16 @@
+.batteriespart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.batteriespart .inverterimage{
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 2rem;
+}

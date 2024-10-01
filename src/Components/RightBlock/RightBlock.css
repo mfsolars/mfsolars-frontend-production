@@ -1,0 +1,15 @@
+.rightblock{
+    min-height: 100vh;
+    width: 94vw;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+
+@media screen and (width<768px){
+    .rightblock{
+        width: 94vw;
+        margin: auto;
+    }
+    
+}

@@ -1,0 +1,780 @@
+@font-face { 
+    font-weight:normal;
+    font-style:normal;
+    font-family:"woodmart-font";
+    src:url("https://invertsolar.co.za/wp-content/themes/woodmart/fonts/woodmart-font-2-400.woff2?v=7.2.3") format("woff2");
+  } 
+  @media all{     
+    body {  
+      font:inherit;
+      font-size:100%;
+      color:var(--wd-text-color);
+      font-weight:var(--wd-text-font-weight);
+      font-style:var(--wd-text-font-style);
+      font-family:sans-serif;
+      line-height:1;
+    }  
+  }  
+  @media all{ 
+    * { 
+      -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+    } 
+  
+    div { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    body { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    body { 
+      margin: 0; 
+      background-color: #fff; 
+      color: var(--wd-text-color); 
+      text-rendering: optimizeLegibility; 
+      font-weight: var(--wd-text-font-weight); 
+      font-style: var(--wd-text-font-style); 
+      font-size: var(--wd-text-font-size); 
+      font-family: var(--wd-text-font); 
+      -webkit-font-smoothing: antialiased; 
+      -moz-osx-font-smoothing: grayscale; 
+      line-height: var(--wd-text-line-height); 
+      --wd-header-h: calc(var(--wd-top-bar-h) + var(--wd-header-general-h) + var(--wd-header-bottom-h)); 
+      --wd-header-sticky-h: calc(var(--wd-top-bar-sticky-h) + var(--wd-header-general-sticky-h) + var(--wd-header-bottom-sticky-h) + var(--wd-header-clone-h));
+    } 
+  
+    body { 
+      overflow: clip;
+    } 
+  
+    body { 
+      --wd-loginform-bg: rgb(255,255,255);
+    } 
+  
+    html { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    html { 
+      line-height: 1; 
+      -webkit-text-size-adjust: 100%; 
+      -webkit-tap-highlight-color: transparent; 
+      font-family: sans-serif; 
+      overflow-x: hidden;
+    } 
+  
+    :root { 
+      --wd-text-line-height: 1.6; 
+      --wd-brd-radius: .001px; 
+      --wd-loginform-height: 42px; 
+      --wd-loginform-color: inherit; 
+      --wd-loginform-bg: transparent; 
+      --wd-loginform-brd-color: rgba(0,0,0,0.2); 
+      --btn-height: 42px; 
+      --btn-transform: uppercase; 
+      --btn-font-weight: 600; 
+      --btn-font-family: inherit; 
+      --btn-font-style: unset; 
+      --wd-main-bgcolor: #fff; 
+      --wd-scroll-w: .001px; 
+      --wd-admin-bar-h: .001px; 
+      --wd-tags-mb: 20px; 
+      --wd-sticky-nav-w: .001px; 
+      --color-gray-200: #f1f1f1; 
+      --color-gray-400: #a5a5a5; 
+      --color-gray-500: #777; 
+      --color-gray-600: #666; 
+      --color-gray-800: #333; 
+      --color-gray-900: #242424; 
+      --bgcolor-white: #fff; 
+      --brdcolor-gray-300: rgba(0,0,0,0.105); 
+    } 
+  
+    :root { 
+      --wd-top-bar-h: 0.001px; 
+      --wd-top-bar-sticky-h: 0.001px; 
+      --wd-header-general-h: 80px; 
+      --wd-header-general-sticky-h: 0.001px; 
+      --wd-header-bottom-h: 60px; 
+      --wd-header-bottom-sticky-h: 60px; 
+      --wd-header-clone-h: 0.001px;
+    } 
+  
+    :root { 
+      --wd-text-font: "Open Sans", Arial, Helvetica, sans-serif; 
+      --wd-text-font-weight: 400; 
+      --wd-text-color: rgb(0,0,0); 
+      --wd-text-font-size: 15px;
+    } 
+  
+    :root { 
+      --wd-title-font: "Lexend Deca", Arial, Helvetica, sans-serif; 
+      --wd-title-font-weight: 500; 
+      --wd-title-color: #242424;
+    } 
+  
+    :root { 
+      --wd-brd-radius: 10px;
+    } 
+  
+    :root { 
+      --wd-primary-color: #029ef6;
+    } 
+  
+    :root { 
+      --wd-link-color: #333333; 
+      --wd-link-color-hover: #242424;
+    } 
+  
+    :root { 
+      --btn-default-bgcolor: rgb(225,235,255);
+    } 
+  
+    :root { 
+      --btn-default-bgcolor-hover: rgb(219,227,249);
+    } 
+  
+    :root { 
+      --btn-default-color: #029ef6;
+    } 
+  
+    :root { 
+      --btn-default-color-hover: #029ef6;
+    } 
+  
+    :root { 
+      --btn-accented-bgcolor: #029ef6;
+    } 
+  
+    :root { 
+      --btn-accented-bgcolor-hover: #029ef6;
+    } 
+  
+    :root { 
+      --btn-transform: capitalize;
+    } 
+  
+    :root { 
+      --wd-loginform-brd-radius: 5px; 
+      --wd-loginform-brd-width: 1px; 
+      --btn-accented-color: #fff; 
+      --btn-accented-color-hover: #fff; 
+      --btn-default-brd-radius: 5px; 
+      --btn-default-box-shadow: none; 
+      --btn-default-box-shadow-hover: none; 
+      --btn-accented-brd-radius: 5px; 
+      --btn-accented-box-shadow: none; 
+      --btn-accented-box-shadow-hover: none; 
+    } 
+  
+    :root { 
+      --wd-container-login-w: 1400px;
+    } 
+  
+    .main-page-login-wrapper { 
+      margin-top: -40px; 
+      padding-top: 40px; 
+      min-height: 50vh; 
+      background-color: var(--wd-main-bgcolor);
+    } 
+  
+    .main-page-login-wrapper  { 
+      background-color: rgb(246,246,246); 
+      background-image: none;
+    } 
+  
+    *,:before,:after { 
+      -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+    } 
+  
+    .container-login { 
+      width: 100%; 
+      padding-right: 15px; 
+      padding-left: 15px; 
+      margin-right: auto; 
+      margin-left: auto;
+    } 
+  
+    .container-login { 
+      max-width: 1400px;
+    } 
+  
+    .row { 
+      display: flex; 
+      flex-wrap: wrap; 
+      margin-right: -15px; 
+      margin-left: -15px;
+    } 
+  
+    .align-items-start { 
+      align-items: flex-start!important;
+    } 
+  
+    .col-12,.col-lg-12,.col-md-12 { 
+      position: relative; 
+      width: 100%; 
+      min-height: 1px; 
+      padding-right: 15px; 
+      padding-left: 15px;
+    } 
+  
+    .col-12 { 
+      flex: 0 0 100%; 
+      max-width: 100%;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    .col-md-12 { 
+      flex: 0 0 100%; 
+      max-width: 100%;
+    } 
+  }     
+  
+  @media (min-width: 1025px){ 
+    .col-lg-12 { 
+      flex: 0 0 100%; 
+      max-width: 100%;
+    } 
+  }     
+  
+  @media all{ 
+    .site-content { 
+      margin-bottom: 40px;
+    } 
+  
+    article { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    article { 
+      display: block;
+    } 
+  
+    .entry-content { 
+      counter-reset: footnotes;
+    } 
+  
+    .woocommerce-notices-wrapper:empty { 
+      display: none;
+    } 
+  
+    .wd-registration-page { 
+      margin-right: auto; 
+      margin-left: auto; 
+      max-width: 1000px;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    #customer_login { 
+      margin-right: -40px; 
+      margin-left: -40px;
+    } 
+  }     
+  
+  @media all{ 
+    .col-12,.col-md-6 { 
+      position: relative; 
+      width: 100%; 
+      min-height: 1px; 
+      padding-right: 15px; 
+      padding-left: 15px;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    .col-md-6 { 
+      flex: 0 0 50%; 
+      max-width: 50%;
+    } 
+  }     
+  
+  @media all{ 
+    .wd-register-tabs :is(.col-register, .col-login)  { 
+      animation: wd-fadeIn .7s ease;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    #customer_login > .col-md-6  { 
+      padding: 25px 40px;
+    } 
+  }     
+  
+  @media all{ 
+    .wd-register-tabs .col-register  { 
+      display: none;
+    } 
+  
+    .col-register-text { 
+      text-align: center;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    #customer_login > div:not(:first-child):last-child  { 
+      border-inline-start: 1px solid var(--brdcolor-gray-300);
+    } 
+  }     
+  
+  @media all{ 
+    h2 { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    h2 { 
+      font-size: 24px;
+    } 
+  
+    h2 { 
+      display: block; 
+      margin-bottom: var(--wd-tags-mb); 
+      color: var(--wd-title-color); 
+      text-transform: var(--wd-title-transform); 
+      font-weight: var(--wd-title-font-weight); 
+      font-style: var(--wd-title-font-style); 
+      font-family: var(--wd-title-font); 
+      line-height: 1.4;
+    } 
+  
+    .wd-login-title { 
+      text-transform: uppercase; 
+      font-size: 22px;
+    } 
+  
+    loginform { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    .login:not(.hidden-loginform) { 
+      display: block !important;
+    } 
+  
+    p { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    p { 
+      margin-bottom: var(--wd-tags-mb);
+    } 
+  
+    .title { 
+      display: block; 
+      margin-bottom: var(--wd-tags-mb); 
+      color: var(--wd-title-color); 
+      text-transform: var(--wd-title-transform); 
+      font-weight: var(--wd-title-font-weight); 
+      font-style: var(--wd-title-font-style); 
+      font-family: var(--wd-title-font); 
+      line-height: 1.4;
+    } 
+  
+    .wd-login-divider { 
+      display: flex; 
+      align-items: center; 
+      text-transform: uppercase;
+    } 
+  }     
+  
+  @media (min-width: 769px){ 
+    .col-register-text .wd-login-divider  { 
+      display: none;
+    } 
+  }     
+  
+  @media all{ 
+    .wd-login-divider:after,.wd-login-divider:before { 
+      content: ""; 
+      flex: 1 0 0; 
+      border-bottom: 1px solid var(--brdcolor-gray-300);
+    } 
+  
+    .registration-info { 
+      margin-bottom: 20px;
+    } 
+  
+    a { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    a { 
+      touch-action: manipulation;
+    } 
+  
+    a { 
+      color: var(--wd-link-color); 
+      text-decoration: none; 
+      transition: all .25s ease;
+    } 
+  
+    :is(.btn, .button, button, [type="submit"], [type="button"]) { 
+      padding: 5px 20px; 
+      min-height: var(--btn-height); 
+      font-size: 13px; 
+      position: relative; 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      outline: none; 
+      border: 0px solid transparent; 
+      border-radius: 0; 
+      box-shadow: none; 
+      vertical-align: middle; 
+      text-align: center; 
+      text-decoration: none; 
+      text-transform: var(--btn-transform); 
+      text-shadow: none; 
+      font-weight: var(--btn-font-weight); 
+      font-family: var(--btn-font-family); 
+      font-style: var(--btn-font-style); 
+      line-height: 1.2; 
+      cursor: pointer; 
+      transition: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, opacity .25s ease; 
+      color: var(--btn-color, #3E3E3E); 
+      background-color: var(--btn-bgcolor, #F3F3F3);
+    } 
+  
+    .wd-switch-to-register { 
+      border-radius: var(--btn-default-brd-radius); 
+      color: var(--btn-default-color); 
+      box-shadow: var(--btn-default-box-shadow); 
+      background-color: var(--btn-default-bgcolor); 
+      text-transform: var(--btn-default-transform, var(--btn-transform)); 
+      font-weight: var(--btn-default-font-weight, var(--btn-font-weight)); 
+      font-family: var(--btn-default-font-family, var(--btn-font-family)); 
+      font-style: var(--btn-default-font-style, var(--btn-font-style));
+    } 
+  
+    a:is(:hover, :focus, :active) { 
+      outline: none; 
+      text-decoration: none;
+    } 
+  
+    a:hover { 
+      color: var(--wd-link-color-hover);
+    } 
+  
+    :is(.btn, .button, button, [type="submit"], [type="button"]):hover { 
+      color: var(--btn-color-hover, #3E3E3E); 
+      background-color: var(--btn-bgcolor-hover, #e0e0e0);
+    } 
+  
+    .wd-switch-to-register:hover { 
+      color: var(--btn-default-color-hover); 
+      box-shadow: var(--btn-default-box-shadow-hover); 
+      background-color: var(--btn-default-bgcolor-hover);
+    } 
+  }     
+  
+  @media (min-width: 1025px){ 
+    p.loginform-row-wide { 
+      clear: both;
+    } 
+  }     
+  
+  @media all{ 
+    .login-loginform-footer { 
+      display: flex; 
+      align-items: center; 
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+      gap: 10px;
+    } 
+  
+    .login > :last-child  { 
+      margin-bottom: 0;
+    } 
+  
+    .register > p  { 
+      position: relative;
+    } 
+  
+    .clear { 
+      clear: both; 
+      width: 100%;
+    } 
+  
+    .register > :last-child  { 
+      margin-bottom: 0;
+    } 
+  
+    span { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    .wd-login-divider span  { 
+      margin-right: 20px; 
+      margin-left: 20px;
+    } 
+  
+    label { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      vertical-align: baseline; 
+      font: inherit; 
+      font-size: 100%;
+    } 
+  
+    label { 
+      display: block; 
+      margin-bottom: 5px; 
+      color: var(--wd-title-color); 
+      vertical-align: middle; 
+      font-weight: 400;
+    } 
+  
+    input { 
+      touch-action: manipulation;
+    } 
+  
+    input { 
+      margin: 0; 
+      color: inherit; 
+      font: inherit;
+    } 
+  
+    input[type="text"] { 
+      -webkit-appearance: none; 
+      -moz-appearance: none; 
+      appearance: none;
+    } 
+  
+    input[type="text"] { 
+      padding: 0 15px; 
+      max-width: 100%; 
+      width: 100%; 
+      height: var(--wd-loginform-height); 
+      border: var(--wd-loginform-brd-width) solid var(--wd-loginform-brd-color); 
+      border-radius: var(--wd-loginform-brd-radius); 
+      background-color: var(--wd-loginform-bg); 
+      box-shadow: none; 
+      color: var(--wd-loginform-color); 
+      vertical-align: middle; 
+      font-size: 14px; 
+      transition: border-color .5s ease;
+    } 
+  
+    .password-input { 
+      position: relative; 
+      display: block;
+    } 
+  
+    button { 
+      touch-action: manipulation;
+    } 
+  
+    button { 
+      margin: 0; 
+      color: inherit; 
+      font: inherit;
+    } 
+  
+    button { 
+      overflow: visible;
+    } 
+  
+    button { 
+      cursor: pointer; 
+      -webkit-appearance: button;
+    } 
+  
+    :is(.register, .login) .button  { 
+      width: 100%; 
+      border-radius: var(--btn-accented-brd-radius); 
+      color: var(--btn-accented-color); 
+      box-shadow: var(--btn-accented-box-shadow); 
+      background-color: var(--btn-accented-bgcolor); 
+      text-transform: var(--btn-accented-transform, var(--btn-transform)); 
+      font-weight: var(--btn-accented-font-weight, var(--btn-font-weight)); 
+      font-family: var(--btn-accented-font-family, var(--btn-font-family)); 
+      font-style: var(--btn-accented-font-style, var(--btn-font-style));
+    } 
+  
+    :is(.register, .login) .button:hover { 
+      color: var(--btn-accented-color-hover); 
+      box-shadow: var(--btn-accented-box-shadow-hover); 
+      background-color: var(--btn-accented-bgcolor-hover);
+    } 
+  
+    .login-loginform-footer .lost_password  { 
+      order: 2; 
+      color: var(--wd-primary-color);
+    } 
+  
+    .login-loginform-footer .lost_password:hover { 
+      color: var(--wd-primary-color); 
+      text-decoration: underline; 
+      opacity: .7;
+    } 
+  
+    .woocommerce-form__label { 
+      cursor: pointer;
+    } 
+  
+    .login-loginform-footer .woocommerce-loginform-login__rememberme  { 
+      order: 1; 
+      margin-bottom: 0;
+    } 
+  
+    input[type="email"] { 
+      -webkit-appearance: none; 
+      -moz-appearance: none; 
+      appearance: none;
+    } 
+  
+    input[type="email"] { 
+      padding: 0 15px; 
+      max-width: 100%; 
+      width: 100%; 
+      height: var(--wd-loginform-height); 
+      border: var(--wd-loginform-brd-width) solid var(--wd-loginform-brd-color); 
+      border-radius: var(--wd-loginform-brd-radius); 
+      background-color: var(--wd-loginform-bg); 
+      box-shadow: none; 
+      color: var(--wd-loginform-color); 
+      vertical-align: middle; 
+      font-size: 14px; 
+      transition: border-color .5s ease;
+    } 
+  
+    .required { 
+      border: none; 
+      color: #E01020; 
+      font-size: 16px; 
+      line-height: 1;
+    } 
+  }     
+  
+  .woocommerce form .loginform-row .required  { 
+      visibility: visible;
+  } 
+  
+  @media all{ 
+    input[type="password"] { 
+      -webkit-appearance: none; 
+      -moz-appearance: none; 
+      appearance: none;
+    } 
+  
+    input[type="password"] { 
+      padding: 0 15px; 
+      max-width: 100%; 
+      width: 100%; 
+      height: var(--wd-loginform-height); 
+      border: var(--wd-loginform-brd-width) solid var(--wd-loginform-brd-color); 
+      border-radius: var(--wd-loginform-brd-radius); 
+      background-color: var(--wd-loginform-bg); 
+      box-shadow: none; 
+      color: var(--wd-loginform-color); 
+      vertical-align: middle; 
+      font-size: 14px; 
+      transition: border-color .5s ease;
+    } 
+  
+    .password-input input  { 
+      padding-inline-end: var(--wd-loginform-height) !important;
+    } 
+  
+    .show-password-input { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      position: absolute; 
+      top: 0; 
+      inset-inline-end: 0; 
+      width: var(--wd-loginform-height); 
+      height: var(--wd-loginform-height); 
+      cursor: pointer; 
+      font-size: 16px; 
+      color: var(--color-gray-600); 
+      transition: all .25s ease;
+    } 
+  
+    .show-password-input:before { 
+      font-family: "woodmart-font"; 
+      content: "\f11a";
+    } 
+  
+    .show-password-input:hover { 
+      color: var(--color-gray-400);
+    } 
+  
+    input[type="checkbox"] { 
+      box-sizing: border-box; 
+      margin-top: 0; 
+      padding: 0; 
+      vertical-align: middle; 
+      margin-inline-end: 5px;
+    } 
+  }     
+  
+  
+  @keyframes wd-fadeIn { 
+    0% {  
+        opacity: 0; 
+        opacity: 0; 
+    }  
+    100% {  
+        opacity: 1; 
+        opacity: 1; 
+    }  
+  
+  } 
+  /* These were inline style tags. Uses id+class to override almost everything */
+  #style-LVpsn.style-LVpsn {  
+     left: -999em;  
+      position: absolute;  
+  }  
+  
