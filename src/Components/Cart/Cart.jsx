@@ -17,7 +17,8 @@ function Cart({ setShowCart }) {
             const userConfig = {
                 headers: {
                     'Content-Type': 'application/json',
-                }
+                },
+                withCredentials: true,
             };
             let response = await axios.delete(`${API_URL}/mfsolars/v1/product/cart`, { data: { product: id } }, userConfig);
             if (response && response.data) {
@@ -37,7 +38,9 @@ function Cart({ setShowCart }) {
 
     const getCartItems = async () => {
         try {
-            let response = await axios.get(`${API_URL}/mfsolars/v1/product/cart`);
+            let response = await axios.get(`${API_URL}/mfsolars/v1/product/cart`,{
+                withCredentials: true,
+            });
             if (response && response.data) {
                 const items = response.data.cart;
                 console.log("Cart items:", items);

@@ -12,7 +12,9 @@ function ProductLookup() {
 
 
     const getDepartment = async () => {
-        const { data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=solar-accessories`);
+        const { data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=solar-accessories`,{
+            withCredentials: true,
+        });
         if (data) {
             setProducts(data?.products);
         }

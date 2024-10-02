@@ -25,8 +25,8 @@ const Products_Admin = () => {
 
     const getProductdata = async () => {
         try {
-            const response = await axios.get(`${API_URL}/mfsolars/v1/products/all`,{
-                withCredentials:true
+            const response = await axios.get(`${API_URL}/mfsolars/v1/products/all`, {
+                withCredentials: true
             });
             setProducts(response.data.products);
         } catch (error) {
@@ -36,8 +36,8 @@ const Products_Admin = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            await axios.delete(`${API_URL}/mfsolars/v1/products/${productId}`,{
-                withCredentials:true
+            await axios.delete(`${API_URL}/mfsolars/v1/products/${productId}`, {
+                withCredentials: true
             });
             getProductdata();
         } catch (error) {
@@ -60,8 +60,8 @@ const Products_Admin = () => {
 
     const handleSaveChanges = async () => {
         try {
-            await axios.put(`${API_URL}/mfsolars/v1/products/${editingProductId}`, formData,{
-                withCredentials:true
+            await axios.put(`${API_URL}/mfsolars/v1/products/${editingProductId}`, formData, {
+                withCredentials: true
             });
             getProductdata();
             setEditingProductId(null);
@@ -96,8 +96,8 @@ const Products_Admin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${API_URL}/mfsolars/v1/products/new`, formData,{
-                withCredentials:true
+            await axios.post(`${API_URL}/mfsolars/v1/products/new`, formData, {
+                withCredentials: true
             });
             getProductdata();
             setShowForm(false);
@@ -174,7 +174,6 @@ const Products_Admin = () => {
                 <thead>
                     <tr>
                         <th>Product ID</th>
-                        <th>Product By</th>
                         <th>Product Name</th>
                         <th>Product Category</th>
                         <th>Stock</th>
@@ -187,7 +186,6 @@ const Products_Admin = () => {
                     {Products.map((Product) => (
                         <tr key={Product?._id}>
                             <td data-label="ID">{Product?._id}</td>
-                            <td data-label="Name">{Product?.creator?.name}</td>
                             <td data-label="Name">
                                 {editingProductId === Product._id ? (
                                     <input
@@ -202,12 +200,19 @@ const Products_Admin = () => {
                             </td>
                             <td data-label="Category">
                                 {editingProductId === Product._id ? (
-                                    <input
-                                        type="text"
+                                    <select
                                         name="category"
                                         value={formData.category}
                                         onChange={handleChange}
-                                    />
+                                    >
+                                        <option value="on-sale">On Sale</option>
+                                        <option value="inverter">Inverter</option>
+                                        <option value="solar-accessories">Solar Accessories</option>
+                                        <option value="solar-batteries">Solar Batteries</option>
+                                        <option value="solar-kit">Solar Kits</option>
+                                        <option value="solar-lights">Solar Lights</option>
+                                        <option value="solar-security-camera">Solar Security Cameras</option>
+                                    </select>
                                 ) : (
                                     Product?.category
                                 )}

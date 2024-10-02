@@ -45,7 +45,8 @@ function SolarInstallments() {
       };
   
       const url = `${API_URL}/mfsolars/v1/installation`;
-      response = await axios.post(url, formData, userConfig);
+      try{
+        response = await axios.post(url, formData, userConfig);
   
       if (response.data.success) {
         toast.success(response.data.message);
@@ -53,7 +54,10 @@ function SolarInstallments() {
         setMessage("");
         setAddress("");
       } else {
-        toast.error("Failed to request. Try Again!");
+        toast.error(response.data.message);
+      }
+      }catch(e){
+        toast.error(response.data.message);
       }
     }
 

@@ -7,7 +7,9 @@ function ProductDetailing() {
         const [product, setProduct] = useState({});
         const API_URL = import.meta.env.VITE_API_URL;
     const getSingleProduct = async () => {
-        const {data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=inverter`);
+        const {data } = await axios.get(`${API_URL}/mfsolars/v1/products?category=inverter`,{
+            withCredentials: true,
+        });
         if (data) {
             setProduct(data?.products[0]);
         }
