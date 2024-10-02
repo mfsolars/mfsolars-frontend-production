@@ -28,7 +28,8 @@ function Login() {
     const userConfig = {
       headers: {
         'Content-Type': 'application/json',
-      }
+      },
+      withCredentials: true,
     };
   
     const url = `${API_URL}/mfsolars/v1/auth/${action}`;
@@ -63,7 +64,7 @@ function Login() {
 
   const handleLogout = async (e) => {
     e.preventDefault();
-    let response = await axios.get(`${API_URL}/mfsolars/v1/auth/logout`);
+    let response = await axios.get(`${API_URL}/mfsolars/v1/auth/logout`,{withCredentials: true});
     if (response.data.success) {
       toast.success(response.data.message);
 
@@ -92,7 +93,7 @@ function Login() {
 
   const requestResetPassword = async () => {
     if (email !== "") {
-      let response = await axios.post(`${API_URL}/mfsolars/v1/auth/forgetpassword`, { email });
+      let response = await axios.post(`${API_URL}/mfsolars/v1/auth/forgetpassword`, { email, withCredentials: true });
       if (response.data.success) {
         toast.success(response.data.message);
       } else {

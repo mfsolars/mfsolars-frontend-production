@@ -15,7 +15,7 @@ const Order_Admin = () => {
     const API_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
-        document.title = "My Orders";
+        document.title = "All Orders for MFSOLARS";
         getOrderdata();
 
     }, []);
@@ -23,7 +23,9 @@ const Order_Admin = () => {
 
     const getOrderdata = async () => {
         try {
-            const response = await axios.get(`${API_URL}/mfsolars/v1/order/orders`);
+            const response = await axios.get(`${API_URL}/mfsolars/v1/order/orders`,{
+                withCredentials: true,
+            });
             console.log(response.data.Orders);
 
             setOrders(response.data.Orders);
@@ -39,7 +41,9 @@ const Order_Admin = () => {
         const orderId = e.target.closest('tr').querySelector('td').textContent;
 
         try {
-            const response = await axios.put(`${API_URL}/mfsolars/v1/order/${orderId}`, { orderStatus: status });
+            const response = await axios.put(`${API_URL}/mfsolars/v1/order/${orderId}`, { orderStatus: status }, {
+                withCredentials: true,
+            });
             getOrderdata();
         } catch (error) {
             console.log(error);
@@ -49,7 +53,9 @@ const Order_Admin = () => {
     const handleDeleteOrder = async (orderId) => {
 
         try {
-            const response = await axios.delete(`${API_URL}/mfsolars/v1/order/${orderId}`);
+            const response = await axios.delete(`${API_URL}/mfsolars/v1/order/${orderId}`,{
+                withCredentials: true,
+            });
             getOrderdata();
         } catch (error) {
             console.log(error);

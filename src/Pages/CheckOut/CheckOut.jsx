@@ -134,7 +134,8 @@ async function submintHandler(e) {
     const configuration = {
       headers: {
         "Content-Type": "application/json",
-      }
+      },
+      withCredentials: true,
     };
 
     try {
@@ -170,7 +171,14 @@ async function submintHandler(e) {
     orderData.paymentinfo = paymentInfo;
 
     // Directly process order since COD doesn’t require payment confirmation
-    await ProcessOrder(orderData);
+    const configUser = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    }
+
+    await ProcessOrder(orderData,configUser);
     btnRef.current.disabled = false;
     return;
   }

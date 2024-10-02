@@ -40,7 +40,8 @@ function SolarInstallments() {
       const userConfig = {
         headers: {
           'Content-Type': 'application/json',
-        }
+        },
+        withCredentials: true,
       };
   
       const url = `${API_URL}/mfsolars/v1/installation`;

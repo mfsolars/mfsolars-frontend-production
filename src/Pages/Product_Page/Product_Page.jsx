@@ -42,7 +42,8 @@ function Product_Page() {
                 const userConfig = {
                     headers: {
                         'Content-Type': 'application/json',
-                    }
+                    },
+                    withCredentials: true,
                 };
                 const response = await axios.post(`${API_URL}/mfsolars/v1/product/cart`, { product: product._id }, userConfig);
                 if (response && response.data) {

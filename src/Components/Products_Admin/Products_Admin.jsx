@@ -25,7 +25,9 @@ const Products_Admin = () => {
 
     const getProductdata = async () => {
         try {
-            const response = await axios.get(`${API_URL}/mfsolars/v1/products/all`);
+            const response = await axios.get(`${API_URL}/mfsolars/v1/products/all`,{
+                withCredentials:true
+            });
             setProducts(response.data.products);
         } catch (error) {
             console.log(error);
@@ -34,7 +36,9 @@ const Products_Admin = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            await axios.delete(`${API_URL}/mfsolars/v1/products/${productId}`);
+            await axios.delete(`${API_URL}/mfsolars/v1/products/${productId}`,{
+                withCredentials:true
+            });
             getProductdata();
         } catch (error) {
             console.log(error);
@@ -56,7 +60,9 @@ const Products_Admin = () => {
 
     const handleSaveChanges = async () => {
         try {
-            await axios.put(`${API_URL}/mfsolars/v1/products/${editingProductId}`, formData);
+            await axios.put(`${API_URL}/mfsolars/v1/products/${editingProductId}`, formData,{
+                withCredentials:true
+            });
             getProductdata();
             setEditingProductId(null);
         } catch (error) {
@@ -90,7 +96,9 @@ const Products_Admin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${API_URL}/mfsolars/v1/products/new`, formData);
+            await axios.post(`${API_URL}/mfsolars/v1/products/new`, formData,{
+                withCredentials:true
+            });
             getProductdata();
             setShowForm(false);
             setFormData({

@@ -15,6 +15,7 @@ function Product({ wishlist, product, setWishListItems }) {
     const pimage = product?.productImages?.[0]?.url; // Use optional chaining here
     const plink = `/products/product/${product?._id}`;
     const user = useSelector(state=>state.user.user?.userlogged);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const handleAddToCart = async(id) => {
         if(user!=null || user!=undefined){
@@ -24,7 +25,7 @@ function Product({ wishlist, product, setWishListItems }) {
                         'Content-Type': 'application/json',
                     }
                 };
-                let response = await axios.post(`${API_URL}/mfsolars/v1/product/cart", { product: id }, userConfig);
+                let response = await axios.post(`${API_URL}/mfsolars/v1/product/cart`, { product: id }, userConfig);
                 if (response && response.data) {
                     toast.success(pname + " added to your cart");
                     return response.data;
@@ -48,7 +49,7 @@ function Product({ wishlist, product, setWishListItems }) {
                     'Content-Type': 'application/json',
                 }
             };
-            let response = await axios.post(`${API_URL}/mfsolars/v1/product/wishlist", { product: id }, userConfig);
+            let response = await axios.post(`${API_URL}/mfsolars/v1/product/wishlist`, { product: id }, userConfig);
             if (response && response.data) {
                 toast.success(pname + "added to your wishlist");
                 setWishListItems(prevItems => [...prevItems, response.data]);
@@ -73,7 +74,7 @@ function Product({ wishlist, product, setWishListItems }) {
                     },
                     data: { product: id }
                 };
-                let response = await axios.delete(`${API_URL}/mfsolars/v1/product/wishlist", userConfig);
+                let response = await axios.delete(`${API_URL}/mfsolars/v1/product/wishlist`, userConfig);
                 if (response && response.data) {
                     toast.success(pname + " removed from your wishlist");
                     setWishListItems(prevItems => prevItems.filter(item => item._id !== id));

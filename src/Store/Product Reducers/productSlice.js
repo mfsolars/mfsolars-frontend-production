@@ -26,7 +26,9 @@ export const getSingleProduct = createAsyncThunk("product/getSingleProduct", asy
     return response.data.product;
 });
 export const gettodayCategories = createAsyncThunk("product/gettodayCategories", async (category) => {
-    const response = await axios.get(`${API_URL}/mfsolars/v1/products?category=${category}`);
+    const response = await axios.get(`${API_URL}/mfsolars/v1/products?category=${category}`,{
+        withCredentials:true
+    });
     return response.data.products;
 });
 

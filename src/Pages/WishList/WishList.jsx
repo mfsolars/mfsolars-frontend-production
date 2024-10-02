@@ -14,7 +14,9 @@ function WishList() {
 
     const getWishlistItems = async () => {
         try {
-            let response = await axios.get(`${API_URL}/mfsolars/v1/product/wishlist`);
+            let response = await axios.get(`${API_URL}/mfsolars/v1/product/wishlist`,{
+                withCredentials:true
+            });
             if (response) {
                 return response.data.wishlist;
             } else {
