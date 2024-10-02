@@ -7,11 +7,11 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 
 function Cart({ setShowCart }) {
-    const API_URL = import.meta.env.VITE_API_URL;
     const [cartItems, setCartItems] = useState([]);
     const [total, setTotal] = useState(0);
     const login_user = useSelector(state => state.user.user?.userlogged);
 
+    const API_URL = import.meta.env.VITE_API_URL;
     const handleRemove = async (id) => {
         try {
             const userConfig = {
@@ -19,8 +19,13 @@ function Cart({ setShowCart }) {
                     'Content-Type': 'application/json',
                 },
                 withCredentials: true,
+                data: { product: id }, // Correct way to send data with DELETE request
             };
-            let response = await axios.delete(`${API_URL}/mfsolars/v1/product/cart`, { data: { product: id } }, userConfig);
+
+
+            let response = await axios.delete(`${API_URL}/mfsolars/v1/product/cart`,  userConfig);
+
+
             if (response && response.data) {
                 toast.success("Item removed from your cart");
 
@@ -38,13 +43,11 @@ function Cart({ setShowCart }) {
 
     const getCartItems = async () => {
         try {
-            let response = await axios.get(`${API_URL}/mfsolars/v1/product/cart`,{
+            let response = await axios.get(`${API_URL}/mfsolars/v1/product/cart`, {
                 withCredentials: true,
             });
             if (response && response.data) {
                 const items = response.data.cart;
-                console.log("Cart items:", items);
-                
                 updateCart(items);
             } else {
                 return [];
@@ -55,7 +58,7 @@ function Cart({ setShowCart }) {
         }
     };
 
-    
+
 
 
     const updateTotal = (items) => {
@@ -67,20 +70,20 @@ function Cart({ setShowCart }) {
         }
     };
 
-  
+
 
     useEffect(() => {
-        
-        if (login_user!==null) {
-            getCartItems(); // Call getCartItems if no cart data exists
-            
-        }
-        
-    }, []);
-    
-    
 
-    
+        if (login_user !== null) {
+            getCartItems(); // Call getCartItems if no cart data exists
+
+        }
+
+    }, []);
+
+
+
+
 
     const updateCart = (updatedItems) => {
         if (Array.isArray(updatedItems)) {
@@ -110,14 +113,14 @@ function Cart({ setShowCart }) {
 
 
 
-    
+
 
     return (
         <div className="cart-widget-side wd-side-hidden wd-right wd-opened mfsolars-TYnjX">
             <div className="wd-heading">
                 <span className="title">Shopping cart</span>
                 <div className="close-side-widget wd-action-btn wd-style-text wd-cross-icon">
-                    <Link to="#" rel="nofollow" onClick={() => setShowCart(false)} style={{ cursor: "pointer",background:"#029ef6" }}>
+                    <Link to="#" rel="nofollow" onClick={() => setShowCart(false)} style={{ cursor: "pointer", background: "#029ef6" }}>
                         <IoClose style={{ fontSize: "1.2rem", marginRight: "0.2rem" }} />
                         Close
                     </Link>
@@ -136,14 +139,14 @@ function Cart({ setShowCart }) {
                                             key={item._id}
                                             className="woocommerce-mini-cart-item mini_cart_item"
                                         >
-                                            
+
                                             <Link
                                                 to="#"
                                                 className="remove remove_from_cart_button"
                                                 aria-label="Remove this item"
                                                 onClick={(e) => { e.preventDefault(); handleRemove(item._id); }}
                                             >
-                                                <IoClose style={{ fontSize: "1.2rem", marginRight: "0.2rem",color:"black" }} />
+                                                <IoClose style={{ fontSize: "1.2rem", marginRight: "0.2rem", color: "black" }} />
                                             </Link>
                                             <Link
                                                 to={"products/product/" + item._id}
@@ -162,7 +165,7 @@ function Cart({ setShowCart }) {
                                                 <span className="wd-entities-title">
                                                     {item.name}
                                                 </span>
-                                                
+
                                                 <div className="quantity">
                                                     <button
                                                         className="minus"

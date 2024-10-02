@@ -50,18 +50,17 @@ function ProductsbyCategory() {
 
 
     return (<>
-        <div className="productdisplay">
+        <div className="productdisplay flex md:flex-row flex-col" >
             {/* part1 start */}
-            <div className="elementor-filters-widget-wrap elementor-filters-element-populated mfsolars-3orLq">
+            <div className="elementor-filters-widget-wrap elementor-filters-element-populated mfsolars-3orLq md:w-96 min-w-full md:min-w-fit" >
                 <section
                     className="wd-negative-gap elementor-filters-section elementor-filters-inner-section elementor-filters-element elementor-filters-element-3f032b7 elementor-filters-section-boxed elementor-filters-section-height-default elementor-filters-section-height-default wd-section-disabled"
-                    data-id="3f032b7"
-                    data-element_type="section"
-                    data-settings='{"background_background":"classic"}'
+                    
+                    
                 >
-                    <div className="elementor-filters-container elementor-filters-column-gap-default">
+                    <div className="elementor-filters-container elementor-filters-column-gap-default" >
                         <div
-                            className="elementor-filters-column elementor-filters-col-100 elementor-filters-inner-column elementor-filters-element elementor-filters-element-47405b7"
+                            className="elementor-filters-column   md:w-96 min-w-full md:min-w-fit elementor-filters-col-100 elementor-filters-inner-column elementor-filters-element elementor-filters-element-47405b7"
                             data-id="47405b7"
                             data-element_type="column"
                         >
@@ -129,38 +128,38 @@ function ProductsbyCategory() {
                                             className="wd-widget widget sidebar-widget woocommerce-filter widget_product_categories"
                                         >
                                             <h5 className="widget-title">Product categories</h5>
-                                            <ul className="product-categories">
-                                                <li className="cat-item cat-item-203">
+                                            <ul className="product-categories flex md:flex-col flex-row overflow-x-scroll md:overflow-hidden">
+                                                <li className="cat-item cat-item-203 text-nowrap max-h-fit">
                                                     <Link to="/products/on-sale/">
                                                         On Sale
                                                     </Link>
                                                 </li>
-                                                <li className="cat-item cat-item-203">
+                                                <li className="cat-item cat-item-203 text-nowrap max-h-fit">
                                                     <Link to="/products/inverter">
                                                         Inverter
                                                     </Link>
                                                 </li>
-                                                <li className="cat-item cat-item-197 current-cat">
+                                                <li className="cat-item cat-item-197 current-cat text-nowrap max-h-fit">
                                                     <Link to="/products/solar-accessories">
                                                         Solar Accessories
                                                     </Link>
                                                 </li>
-                                                <li className="cat-item cat-item-197 current-cat">
+                                                <li className="cat-item cat-item-197 current-cat text-nowrap max-h-fit">
                                                     <Link to="/products/solar-batteries/">
                                                         Solar Batteries
                                                     </Link>
                                                 </li>
-                                                <li className="cat-item cat-item-187 cat-parent">
+                                                <li className="cat-item cat-item-187 cat-parent text-nowrap max-h-fit">
                                                     <Link to="/products/solar-kit">
                                                         Solar Kit
                                                     </Link>
                                                 </li>
-                                                <li className="cat-item cat-item-176 cat-parent">
+                                                <li className="cat-item cat-item-176 cat-parent text-nowrap max-h-fit" >
                                                     <Link to="/products/solar-lights">
                                                         Solar Lights
                                                     </Link>
                                                 </li>
-                                                <li className="cat-item cat-item-190 cat-parent">
+                                                <li className="cat-item cat-item-190 cat-parent text-nowrap max-h-fit">
                                                     <Link to="/products/solar-security-camera">
                                                         Solar Security Cameras
                                                     </Link>
@@ -203,39 +202,11 @@ function ProductsbyCategory() {
                                 </div>
                             </div>
                         </div>
-                        <div
-                            className="elementor-column elementor-col-66 elementor-inner-column elementor-element-filters elementor-element-filters-193a70f"
-                            data-id="193a70f"
-                            data-element_type="column"
-                            style={{ width: "20vw", marginRight: "1rem" }}
-                        >
-                            <div className="elementor-widget-wrap elementor-element-filters-populated">
-
-
-                                <div
-                                    className="elementor-element-filters elementor-element-filters-0c9d547 elementor-widget__width-auto elementor-hidden-mobile wd-shop-ordering elementor-widget elementor-widget-wd_shop_archive_orderby"
-                                    data-id="0c9d547"
-                                    data-element_type="widget"
-                                    data-widget_type="wd_shop_archive_orderby.default"
-                                >
-                                   
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </section>
 
 
-                <div
-                    className="elementor-element-filters elementor-element-filters-78b73af wd-wc-notices elementor-widget elementor-widget-wd_wc_notices"
-                    data-id="78b73af"
-                    data-element_type="widget"
-                    data-widget_type="wd_wc_notices.default"
-                >
-                    <div className="elementor-widget-container">
-                        <div className="woocommerce-filter-notices-wrapper" />
-                    </div>
-                </div>
                 <div
                     className="elementor-element-filters elementor-element-filters-26dfe0a wd-shop-product elementor-widget elementor-widget-wd_archive_products"
                     data-id="26dfe0a"
@@ -243,9 +214,6 @@ function ProductsbyCategory() {
                     data-widget_type="wd_archive_products.default"
                 >
                     <div className="elementor-widget-container">
-                        <div className="wd-sticky-loader wd-position-stick">
-                            <span className="wd-loader" />
-                        </div>
                         <div
                             className="products elements-grid wd-products-holder  wd-spacing-20 grid-columns-4 pagination-pagination title-line-one wd-stretch-cont-lg align-items-start wd-products-with-bg row"
                             data-source="main_loop"

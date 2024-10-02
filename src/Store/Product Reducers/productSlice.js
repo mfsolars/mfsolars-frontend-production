@@ -17,12 +17,17 @@ const API_URL = import.meta.env.VITE_API_URL;
 export const getProducts = createAsyncThunk("product/getProducts", async ({ keyword, page, category, loweramount = 0, highamount = 10000, ratings=1}) => {
     page = page || 1;
     keyword = keyword || '';
+    const API_URL = import.meta.env.VITE_API_URL;
     category = category ? category.toLowerCase() : '';
-    const { data } = await axios.get(`${API_URL}/mfsolars/v1/products?keyword=${keyword}&page=${page}&category=${category}&price[gte]=${loweramount}&price[lte]=${highamount}&ratings[gte]=${ratings}`);
+    const { data } = await axios.get(`${API_URL}/mfsolars/v1/products?keyword=${keyword}&page=${page}&category=${category}&price[gte]=${loweramount}&price[lte]=${highamount}&ratings[gte]=${ratings}`,{
+        withCredentials:true
+    });
     return data;
 });
 export const getSingleProduct = createAsyncThunk("product/getSingleProduct", async (id) => {
-    const response = await axios.get(`${API_URL}/mfsolars/v1/products/${id}`);
+    const response = await axios.get(`${API_URL}/mfsolars/v1/products/${id}`,{
+        withCredentials:true
+    });
     return response.data.product;
 });
 export const gettodayCategories = createAsyncThunk("product/gettodayCategories", async (category) => {

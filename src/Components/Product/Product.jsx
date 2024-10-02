@@ -26,15 +26,18 @@ function Product({ wishlist, product, setWishListItems }) {
                     },
                     withCredentials: true,
                 };
-                let response = await axios.post(`${API_URL}/mfsolars/v1/product/cart`, { product: id }, userConfig);
+
+
+                let response = await axios.post(`${API_URL}/mfsolars/v1/product/cart`,{product:id}, userConfig);
                 if (response && response.data) {
                     toast.success(pname + " added to your cart");
                     return response.data;
                 } else {
+                    
                     return [];
                 }
             } catch (error) {
-                console.error("Error fetching cart items:", error);
+                toast.warn(`${pname} exists in cart`);
                 return [];
             }
         }else{

@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 function ProductPageProduct({ product }) {
+
+    const API_URL = import.meta.env.VITE_API_URL;
     const handleAddToCart = async(id) => {
         try {
             const userConfig = {
@@ -50,7 +52,7 @@ function ProductPageProduct({ product }) {
     };
 
     return (
-        <div className="product-grid-item product wd-hover-fw-button wd-hover-with-fade col-lg-3 col-md-3 col-6 first type-product min-w-[250px]"  data-id={product.id}>
+        <div className="product-grid-item product wd-hover-fw-button wd-hover-with-fade col-lg-3 col-md-3 col-6 first type-product md:min-w-[250px] min-w-[80vw] m-auto md:m-0"  data-id={product.id}>
             <div className="product-wrapper">
                 <div className="content-product-imagin" />
                 <div className="product-element-top wd-quick-shop">
