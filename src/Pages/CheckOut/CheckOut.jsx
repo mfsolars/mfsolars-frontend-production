@@ -29,12 +29,12 @@ function CheckOut() {
   const [pincode, setPincode] = useState("");
   const [state, setState] = useState("");
   const [total, setTotal] = useState(0);
-  const API_URL = import.meta.env.VITE_API_URL;
-
+  
   const [reftoken, setRefToken] = useState("");
-
+  
   const navigate = useNavigate();
   
+  const API_URL = import.meta.env.VITE_API_URL;
   
   const storedItems = JSON.parse(sessionStorage.getItem("cart"));
 
@@ -93,6 +93,12 @@ async function submintHandler(e) {
   };
 
   // Prepare order data
+  if (!name || !phone || !email || !address || !country || !state || !pincode) {
+    toast.error("Please fill all fields.");
+    btnRef.current.disabled = false;
+    return;
+  }
+  
   const orderData = {
     Shippinginfo: {
       address: address,
