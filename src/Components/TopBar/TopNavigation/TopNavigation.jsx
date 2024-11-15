@@ -30,9 +30,9 @@ function TopNavigation() {
             {showCart && loggedInUser?.userlogged && <Cart setShowCart={setShowCart} />}
             <div className="bg-[#f85706c8]  md:bg-[#f8570697] rounded-none  w-[100vw] py-4 h-fit" style={{ position: "sticky", top: "0", zIndex: "10" }}>
                 {
-                    menuopen ? <RiMenu3Fill className="text-xl text-black font-bold cursor-pointer lg:hidden" onClick={() => {
+                    menuopen ? <RiMenu3Fill className="text-xl text-black font-bold cursor-pointer ml-7 lg:hidden" onClick={() => {
                         setMenuOpen(false)
-                    }} /> : <RiMenu2Fill className="text-xl text-black font-bold cursor-pointer lg:hidden" onClick={() => {
+                    }} /> : <RiMenu2Fill className="text-xl text-black font-bold cursor-pointer ml-7 lg:hidden" onClick={() => {
                         setMenuOpen(true)
                     }} />
                 }

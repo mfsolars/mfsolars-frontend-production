@@ -16,10 +16,11 @@ function ProductLookup() {
 
 
     return (
-        <section className="w-[96vw] h-fit m-auto -translate-x-1 overflow-hidden">
+        <section className="w-[100%] h-fit m-auto">
             <Swiper
                 slidesPerView={1}
-                style={{ width: "100%", height: "20rem", borderBottomLeftRadius:"10rem", borderTopRightRadius:"10rem" }}
+                style={{borderBottomLeftRadius:"10rem", borderTopRightRadius:"10rem" }}
+                className='w-full h-60 md:h-80'
                 modules={[Autoplay]}
                 autoplay={{
                     delay: 5000,
