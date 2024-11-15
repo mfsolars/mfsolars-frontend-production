@@ -36,7 +36,7 @@ function CheckOut() {
   
   const API_URL = import.meta.env.VITE_API_URL;
   
-  const storedItems = JSON.parse(sessionStorage.getItem("cart"));
+  // const storedItems = JSON.parse(sessionStorage.getItem("cart"));
 
   useEffect(() => {
     // Clear sessionStorage if user is not logged in
@@ -65,16 +65,26 @@ function CheckOut() {
 
 // useEffect to check and process the order when token is present after redirection
 useEffect(() => {
-  // Retrieve token from sessionStorage or state
-  const storedToken = sessionStorage.getItem("reftoken");
+  const queryReference = new URLSearchParams(window.location.search).get('reference');
+  
 
-  if (storedToken) {
-    const storedOrderData = JSON.parse(sessionStorage.getItem("orderData"));
-    console.log("Stored Order Data:", storedOrderData);
-    ProcessOrder(storedOrderData);
-    sessionStorage.removeItem("reftoken"); 
+  if (queryReference) {
+    sessionStorage.setItem("reftoken", queryReference);
+    window.history.replaceState({}, document.title, window.location.pathname); // Remove query params from URL
   }
-}, [reftoken]);
+
+  if (queryReference) {
+    const token = queryReference;
+    const storedOrderData = JSON.parse(sessionStorage.getItem("orderData"));
+    console.log("Making payment verification request...", token);
+    
+    verifyPayment(token, storedOrderData);
+    sessionStorage.removeItem("reftoken");
+  }
+
+
+
+}, []);
 
 
 
@@ -133,8 +143,9 @@ async function submintHandler(e) {
 
   if (paymentMethod === "card") {
     const PaymentData = {
-      amount: total * 100,
-      email: email
+      amount: (total * 100)<1000? (total+100 * 100):(total * 100),
+      email: email,
+      callback_url: `https://www.mfsolars.com/checkout`,
     };
 
     const configuration = {
@@ -147,15 +158,14 @@ async function submintHandler(e) {
     try {
       // Step 1: Initiate payment and get the authorization URL
       const { data } = await axios.post(`${API_URL}/mfsolars/v1/payment`, PaymentData, configuration);
+      
+      // setRefToken(data.reference);
+
 
       // Redirect the user to Paystack (or another payment processor)
       window.location.href = data.authorization_url;
-
-      // Extract token from authorization URL
-      const reference = getTokenFromUrl(data.authorization_url);
       
-      // Store token in sessionStorage
-      sessionStorage.setItem("reftoken", reference);
+
 
       return; // Exit function after redirection
     } catch (error) {
@@ -194,12 +204,34 @@ async function submintHandler(e) {
 
 function getTokenFromUrl(url) {
   const segments = url.split('/');
+  setRefToken(segments[segments.length - 1]);
   return segments[segments.length - 1];
 }
 
 
 
   // submit handler end
+
+
+  const verifyPayment = async (reference, OrderData) => {
+    try {
+      if (reference) {
+        const response = await axios.post(`${API_URL}/mfsolars/v1/verify-payment`, { reference }, {
+          withCredentials: true
+        });
+        if (response.data.status === 'success') {
+          setPaymentStatus('success');
+          ProcessOrder(OrderData);
+          
+        } else {
+          setPaymentStatus('failed');
+        }
+      }
+    } catch (error) {
+      toast.error("Error verifying payment. Please Try Again later.");
+      setPaymentStatus('failed');
+    }
+  };
 
 
 
@@ -210,7 +242,6 @@ function getTokenFromUrl(url) {
         console.log("API Response:", response.data);
 
         if (response.data.success) {
-            // Reset state and navigate
             setAddress("");
             setCountry("");
             setPincode("");

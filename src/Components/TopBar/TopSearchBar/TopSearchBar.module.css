@@ -5,6 +5,7 @@
   align-items: center;
   padding: 10px 20px;
   position: relative;
+  background-color: #f85606;
 }
 
 
@@ -38,10 +39,10 @@
 }
 
 .search-form button {
-  padding: 10px;
-  border: 1px solid #dee2e6;
-  border-left: none;
-  background-color: #007bff;
+  padding: 10px 12px;
+  border: 2px solid #dee2e6;
+  background-color: #f85606 !important;
+  /* bg-[#f85706ae]  md:bg-[#f857065f] */
   color: white;
   border-radius: 0 4px 4px 0;
   border-radius: 50%;
@@ -55,6 +56,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: rgba(255, 255, 255, 0.863);
+  font-size: 85%;
 }
 
 .info-item {

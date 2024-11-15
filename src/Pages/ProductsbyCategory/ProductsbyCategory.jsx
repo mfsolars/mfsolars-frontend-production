@@ -50,7 +50,7 @@ function ProductsbyCategory() {
 
 
     return (<>
-        <div className="productdisplay flex md:flex-row flex-col" >
+        <div className="productdisplay flex md:flex-row flex-col w-[93%] m-auto" >
             {/* part1 start */}
             <div className="elementor-filters-widget-wrap elementor-filters-element-populated mfsolars-3orLq md:w-96 min-w-full md:min-w-fit" >
                 <section
@@ -238,7 +238,7 @@ function ProductsbyCategory() {
 
                         </div>
                         {
-                           (Math.ceil(totalProducts/ResultperPage)>1) && !Products?.length<8?<>
+                           (Math.ceil(totalProducts/ResultperPage)>1)?<>
                            
                            <div className="wd-loop-footer products-footer">
                                 <nav className="woocommerce-filter-pagination wd-pagination">
@@ -255,11 +255,13 @@ function ProductsbyCategory() {
                                         </>:""
                                         }
                                         
-                                        <li>
+                                        {
+                                            Products?.length>=8 ?<li>
                                             <span aria-current="page" className="page-numbers current">
                                                 {page}
                                             </span>
-                                        </li>
+                                        </li>:""
+                                        }
 
                                         {
                                             page<(Math.ceil(totalProducts/ResultperPage)) && Products?.length>=8 ?<>

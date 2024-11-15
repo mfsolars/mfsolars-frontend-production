@@ -120,7 +120,7 @@ function Cart({ setShowCart }) {
             <div className="wd-heading">
                 <span className="title">Shopping cart</span>
                 <div className="close-side-widget wd-action-btn wd-style-text wd-cross-icon">
-                    <Link to="#" rel="nofollow" onClick={() => setShowCart(false)} style={{ cursor: "pointer", background: "#029ef6" }}>
+                    <Link to="#" rel="nofollow" onClick={() => setShowCart(false)} style={{ cursor: "pointer", background: "#f85606" }}>
                         <IoClose style={{ fontSize: "1.2rem", marginRight: "0.2rem" }} />
                         Close
                     </Link>

@@ -1,5 +1,6 @@
 import "./DeliveryReturn.css"
 import { Link } from 'react-router-dom';
+import imgg from "../../assets/box.png"
 function DeliveryReturn() {
     return ( <>
     <div className="main-page-wrapper mfsolars-CmTVI" style={{marginTop:"2rem",backgroundColor:"white"}}>
@@ -80,7 +81,7 @@ function DeliveryReturn() {
                                       decoding="async"
                                       width={420}
                                       height={240}
-                                      src="https://invertsolar.co.za/wp-content/uploads/2023/01/delivery-return-img.jpg"
+                                      src={imgg}
                                       className="attachment-full size-full wp-image-9168"
                                       alt=""
                                     />

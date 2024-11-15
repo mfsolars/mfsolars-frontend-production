@@ -18,7 +18,7 @@
     --yellow: #f5b409;
     --red: #f33e5d;
     --green: #9bd846;
-    --blue: #029ef6;
+    --blue: #f85606;
     --orange: #ee712f;
     --pink: #ef5890;
     
@@ -267,7 +267,7 @@ tr:hover{
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-  background: #029ef6;
+  background: #f85606;
   padding: 2rem 4rem;
 }
 
@@ -296,7 +296,7 @@ tr:hover{
 
 
 .addButton {
-    background-color: #029ef6; 
+    background-color: #f85606; 
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;

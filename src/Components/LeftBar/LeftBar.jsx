@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MdMenu } from "react-icons/md";
 function LeftBar() {
     return (<>
-        <div className="left-wd-sticky-nav wd-hide-md mfsolars0-0-0-1 mfsolars-FkWBZ hidden lg:block">
+        <div className="left-wd-sticky-nav wd-hide-md hidden lg:block">
             <div className="left-wd-sticky-nav-title">
                 <MdMenu style={{minWidth:"25px",minHeight:"25px",transform:"translateX(-2px)"}}/>
                 <span className="mfsolars0-2-2-3" style={{color:"rgb(255, 255, 255,0.85)"}}>All Categories </span>

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { toast } from "react-toastify";
 import axios from "axios";
 import {useSelector} from "react-redux";
+import { FaDotCircle } from "react-icons/fa";
+
 
 function Product({ wishlist, product, setWishListItems }) {
     const id = product?._id;
@@ -99,9 +101,9 @@ function Product({ wishlist, product, setWishListItems }) {
 
     return (
         <div className="product-grid-item product wd-solarlight-hover-fw-button wd-solarlight-hover-with-fade col-lg-20_0 col-md-4 col-6 first type-product post-11708 status-publish instock product_cat-solar-flood-lights product_cat-solar-lights has-post-thumbnail shipping-taxable purchasable produtel:+27101108868ct-type-simple mfsolars0-15-178-179 hover-ready"  style={{ minWidth: "230px", maxWidth: "18.4rem", textAlign: "left",userSelect: "none" }}>
-            <div className="product-wrapper mfsolars0-16-179-180">
-                <div className="content-product-imagin mfsolars0-17-180-181 style-OoONl" id="style-OoONl" />
-                <div className="product-element-top wd-solarlight-quick-shop mfsolars0-17-180-182">
+            <div className="product-wrapper mfsolars0-16-179-180 px-2 py-3"  style={{border:"4px solid black !important"}}>
+                <div className="content-product-imagin mfsolars0-17-180-181 style-OoONl"  />
+                <div className="product-element-top wd-solarlight-quick-shop mfsolars0-17-180-182" >
                     <Link to={plink} className="product-image-link mfsolars0-18-182-183">
                         <img fetchpriority="high" decoding="async" width={1024} height={1024} style={{width:"600px",aspectRatio:"1/1",objectFit:"cover"}} src={pimage} className="attachment-large size-large wp-image-9778 mfsolars0-19-183-184" alt="" />
                     </Link>
@@ -111,7 +113,7 @@ function Product({ wishlist, product, setWishListItems }) {
                                 <span className="mfsolars0-20-186-187 cursor-pointer" onClick={() => {
                                     handleAddToWishList(id);
                                 }}>
-                                    <CiHeart style={{ fontSize: "1.3rem" }} />
+                                    <CiHeart style={{ fontSize: "1.3rem", color:"red" }} />
                                 </span>
                             </div>
                         ) : null}
@@ -119,30 +121,32 @@ function Product({ wishlist, product, setWishListItems }) {
                 </div>
                 <div className="product-element-bottom mfsolars0-17-180-189">
                     <h3 className="wd-solarlight-entities-title mfsolars0-18-189-190">
-                        <Link to={plink} className="mfsolars0-19-190-191">{pname}</Link>
+                        <Link style={{color:"black", fontSize:"110%"}} to={plink} className="mfsolars0-19-190-191">{pname}</Link>
                     </h3>
-                    <div className="wd-solarlight-star-rating mfsolars0-18-189-192">
-                        <div className="mfsolars0-19-192-193 flex flex-row" style={{ color: "rgb(255, 100, 0)" }} role="img" aria-label="Rated 0 out of 5">
-                        {[...Array(5)].map((_, index) => (
-                                <FaStar key={index} style={{ fontSize: "1.3rem", color: index < (product?.ratings) ? 'gold' : 'gray' }} />
-                            ))}
-                        </div>
-                    </div>
-                    <div className="text-slate-500">{product?.Stock>0? <span className="text-green-600 font-bold">In stock</span>:<span className="text-red-800 font-bold">Out of stock</span>}</div>
+                    
                     <div className="wrap-price mfsolars0-18-189-197">
                         <span className="price mfsolars0-19-197-198">
                             <span className="woocommerce-Price-amount amount mfsolars0-20-198-199">
-                                <bdi className="mfsolars0-21-199-200">
-                                    <span className="woocommerce-Price-currencySymbol mfsolars0-22-200-201">R</span>
-                                    {pprice}
+                                <bdi className="mfsolars0-21-199-200 flex items-center gap-3" style={{color:"#f85606", fontSize:"90%", fontWeight:"200"}}>
+                                    <span className="woocommerce-Price-currencySymbol mfsolars0-22-200-201 flex">R {pprice}</span>
+                                    <FaDotCircle title={product?.Stock>0?"In Stock":"Out of Stock"} className={`${product?.Stock>0?"text-green-800":"text-red-800"} font-bold text-base ml-2`} />
                                 </bdi>
                             </span>
                         </span>
                     </div>
+
+                    <div className="wd-solarlight-star-rating mfsolars0-18-189-192">
+                        <div className="mfsolars0-19-192-193 flex flex-row" style={{ color: "rgb(255, 100, 0)" }} role="img" aria-label="Rated 0 out of 5">
+                        {[...Array(5)].map((_, index) => (
+                                <FaStar key={index} style={{ fontSize: "1rem", color: index < (product?.ratings) ? 'orange' : 'gray' }} />
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="wd-solarlight-add-btn wd-solarlight-add-btn-replace mfsolars0-18-189-202" onClick={()=>{
                         handleAddToCart(product?._id);
                     }}>
-                        <div className="button product_type_simple text-slate-100 rounded bg-[#1c61e7] w-full add_to_cart_button ajax_add_to_cart add-to-cart-loop mfsolars0-19-202-203" title="Minimum qty is 1">
+                        <div className="button text-slate-100 rounded w-full addtocart_clr  add-to-cart-loop mfsolars0-19-202-203" title="Minimum qty is 1">
                             <span className="mfsolars0-20-203-204">Add to cart</span>
                         </div>
                     </div>

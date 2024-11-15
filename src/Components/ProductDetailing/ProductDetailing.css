@@ -138,7 +138,7 @@
     } 
   
     :root { 
-      --wd-primary-color: #029ef6;
+      --wd-primary-color: #f85606;
     } 
   
     :root { 
@@ -388,7 +388,7 @@
     .wd-button-wrapper a  { 
       background-color: #E1EBFF; 
       border-color: #E1EBFF; 
-      color: #1C61E7;
+      color: #f85606;
     } 
   
     a:is(:hover, :focus, :active) { 
@@ -408,7 +408,7 @@
     .elementor-14 .elementor-element.elementor-element-31f0652 .wd-button-wrapper:hover a { 
       background-color: #DBE3F9; 
       border-color: #DBE3F9; 
-      color: #1C61E7;
+      color: #f85606;
     } 
   
     span { 

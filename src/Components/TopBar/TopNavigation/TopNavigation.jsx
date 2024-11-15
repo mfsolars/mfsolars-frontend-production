@@ -28,7 +28,7 @@ function TopNavigation() {
     return (
         <>
             {showCart && loggedInUser?.userlogged && <Cart setShowCart={setShowCart} />}
-            <div className="links-container mfsolars-f5EDF bg-[#56c4ffe2]  md:bg-[#029df63b]  w-full py-4 h-fit" style={{ position: "sticky", top: "0", zIndex: "10" }}>
+            <div className="bg-[#f85706c8]  md:bg-[#f8570697] rounded-none  w-[100vw] py-4 h-fit" style={{ position: "sticky", top: "0", zIndex: "10" }}>
                 {
                     menuopen ? <RiMenu3Fill className="text-xl text-black font-bold cursor-pointer lg:hidden" onClick={() => {
                         setMenuOpen(false)
@@ -36,7 +36,7 @@ function TopNavigation() {
                         setMenuOpen(true)
                     }} />
                 }
-                <div className={`whb-header-bottom-inner flex-col lg:flex-row items-stretch lg:flex ${menuopen ? "flex" : "hidden"}`}>
+                <div className={`whb-header-bottom-inner flex-col lg:flex-row items-stretch lg:flex px-11 ${menuopen ? "flex" : "hidden"}`}>
                     <div className="whb-column whb-col-center whb-visible-lg">
                         <div className="wd-header-nav wd-header-main-nav text-left wd-design-1" role="navigation" aria-label="Main navigation">
                             <ul id="menu-header-menu-mega-electronics" className="menu wd-nav wd-nav-main wd-style-bg wd-gap-s wd-offsets-calculated  flex lg:flex-row flex-col items-stretch">
@@ -61,7 +61,7 @@ function TopNavigation() {
                                 {
                                     loggedInUser?.userlogged  && (
                                
-                                <li id="menu-item-9676" className={`menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-14 menu-item-9676 item-level-0 menu-simple-dropdown wd-event-hover ${currentPage === 'home' ? 'current-menu-item' : ''}`} onClick={() => setCurrentPage('home')}>
+                                <li id="menu-item-9676" className={`menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-14 menu-item-9676 item-level-0 menu-simple-dropdown wd-event-hover ${currentPage === 'myorders' ? 'current-menu-item' : ''}`} onClick={() => setCurrentPage('myorders')}>
                                     <Link to="/order/me" className="woodmart-nav-link">
                                         <span className="nav-link-text">My Orders</span>
                                     </Link>

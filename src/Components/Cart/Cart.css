@@ -153,7 +153,7 @@
     } 
   
     :root { 
-      --wd-primary-color: #029ef6;
+      --wd-primary-color: #f85606;
     } 
   
     :root { 
@@ -170,19 +170,19 @@
     } 
   
     :root { 
-      --btn-default-color: #029ef6;
+      --btn-default-color: #f85606;
     } 
   
     :root { 
-      --btn-default-color-hover: #029ef6;
+      --btn-default-color-hover: #f85606;
     } 
   
     :root { 
-      --btn-accented-bgcolor: #029ef6;
+      --btn-accented-bgcolor: #f85606;
     } 
   
     :root { 
-      --btn-accented-bgcolor-hover: #029ef6;
+      --btn-accented-bgcolor-hover: #f85606;
     } 
   
     :root { 

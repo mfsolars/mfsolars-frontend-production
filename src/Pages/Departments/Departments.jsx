@@ -1,6 +1,7 @@
 import "./Departments.css"
 import SolarLighting from "../../Components/SolarLighting/SolarLighting"
 import HowItWorks from "../../Components/HowItWorks/HowItWorks";
+import dep_img from "../../assets/coupen.png";
 function Departments() {
   return (<>
     <div
@@ -68,7 +69,7 @@ function Departments() {
                       decoding="async"
                       width={538}
                       height={303}
-                      src="https://invertsolar.co.za/wp-content/uploads/2023/01/outlet-img.jpg"
+                      src={dep_img}
                       className="attachment-full size-full wp-image-9183"
                       alt=""
                     />

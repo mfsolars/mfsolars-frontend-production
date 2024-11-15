@@ -1,10 +1,4 @@
-@font-face { 
-    font-display:swap;
-    font-weight:400;
-    font-style:normal;
-    font-family:"woodmart-font";
-    src:url(/wp-content/themes/woodmart/fonts/woodmart-font-2-400.woff2?v=7.2.3) format("woff2");
-  } 
+
   @media all{     
     body {  
       font:inherit;
@@ -92,22 +86,6 @@
       overflow: clip;
     } 
   
-    html { 
-      margin: 0; 
-      padding: 0; 
-      border: 0; 
-      vertical-align: baseline; 
-      font: inherit; 
-      font-size: 100%;
-    } 
-  
-    html { 
-      line-height: 1; 
-      -webkit-text-size-adjust: 100%; 
-      -webkit-tap-highlight-color: transparent; 
-      font-family: sans-serif; 
-      overflow-x: hidden;
-    } 
   
     :root { 
       --wd-solarlight-text-line-height: 1.6; 
@@ -165,7 +143,7 @@
     } 
   
     :root { 
-      --wd-solarlight-primary-color: #029ef6;
+      --wd-solarlight-primary-color: #f85606;
     } 
   
     :root { 
@@ -174,11 +152,11 @@
     } 
   
     :root { 
-      --btn-accented-bgcolor: #029ef6;
+      --btn-accented-bgcolor: #f85606;
     } 
   
     :root { 
-      --btn-accented-bgcolor-hover: #029ef6;
+      --btn-accented-bgcolor-hover: #f85606;
     } 
   
     :root { 
@@ -362,8 +340,33 @@
       line-height: 1.2; 
       cursor: pointer; 
       transition: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, opacity .25s ease; 
-      color: var(--btn-color, #3E3E3E); 
-      background-color: var(--btn-bgcolor, #F3F3F3);
+      color: var(--btn-color, #3E3E3E);
+    } 
+    .moreproducts{ 
+      padding: 5px 20px; 
+      min-height: var(--btn-height); 
+      font-size: 13px; 
+      position: relative; 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      outline: none; 
+      border: 0px solid transparent; 
+      border-radius: 0; 
+      box-shadow: none; 
+      vertical-align: middle; 
+      text-align: center; 
+      text-decoration: none; 
+      text-transform: var(--btn-transform);
+      text-shadow: none; 
+      font-weight: var(--btn-font-weight); 
+      font-family: var(--btn-font-family); 
+      font-style: var(--btn-font-style); 
+      line-height: 1.2; 
+      cursor: pointer; 
+      color: aliceblue;
+      background: linear-gradient(135deg,#f85606 ,#f857067a ) !important;
+      border-radius: 50px;
     } 
   
     .btn-icon-pos-right { 
@@ -382,7 +385,7 @@
     .elementor-element.elementor-element-31f0652 .wd-solarlight-button-wrapper a  { 
       background-color: #E1EBFF; 
       border-color: #E1EBFF; 
-      color: #1C61E7;
+      color: #f85606;
     } 
   
     a:is(:hover, :focus, :active) { 
@@ -402,7 +405,7 @@
     .elementor-14 .elementor-element.elementor-element-31f0652 .wd-solarlight-button-wrapper:hover a { 
       background-color: #DBE3F9; 
       border-color: #DBE3F9; 
-      color: #1C61E7;
+      color:#f85606;
     } 
   
     [class*="wd-solarlight-spacing-"] { 
@@ -835,10 +838,13 @@
       white-space: nowrap; 
       letter-spacing: 2px; 
       font-weight: 400; 
-      color: #EABE12; 
-      font-family: "woodmart-font";
+      color: #EABE12;
     } 
   
+    .addtocart_clr{
+      background: #f85606;
+      background-color: var(--wd-solarlight-primary-color);
+    }
     .product-grid-item .wd-solarlight-star-rating .star-rating  { 
       margin-bottom: 0;
     } 
@@ -895,9 +901,10 @@
       transform: translateY(100%); 
       content: "🛒"; 
       color: aliceblue;
-      background:#1c61e7;
-      font-family: "woodmart-font";
+      background:#f85706eb;
     } 
+
+
   
     .wd-solarlight-add-btn-replace .add-to-cart-loop::after { 
       position: absolute; 

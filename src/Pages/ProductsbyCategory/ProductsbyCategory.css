@@ -1,10 +1,4 @@
-@font-face { 
-    font-display:swap;
-    font-weight:400;
-    font-style:normal;
-    font-family:"woodmart-font";
-    src:url(https://invertsolar.co.za/wp-content/themes/woodmart/fonts/woodmart-font-2-400.woff2?v=7.2.3) format("woff2");
-  } 
+
   @media all{     
     body {  
       font:inherit;
@@ -232,7 +226,7 @@
     } 
   
     :root { 
-      --wd-primary-color: #029ef6;
+      --wd-primary-color: #f85706ea;
     } 
   
     :root { 
@@ -249,11 +243,11 @@
     } 
   
     :root { 
-      --btn-default-color: #029ef6;
+      --btn-default-color: #f85706ea;
     } 
   
     :root { 
-      --btn-default-color-hover: #029ef6;
+      --btn-default-color-hover: #f85706ea;
     } 
   
     :root { 
@@ -306,7 +300,6 @@
     } 
   
     .elementor-filters-element.elementor-filters-element-3f032b7  { 
-      transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s; 
       padding: 20px 15px 20px 15px;
     } 
   
@@ -469,7 +462,7 @@
   }     
   
   li.cat-item.cat-item-201 { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
@@ -484,41 +477,41 @@
   } 
   
   .widget_product_categories .product-categories li  { 
-      border-radius: 5px;
+      border-radius: 0 10px 0 10px;
   } 
   
   li.cat-item.cat-item-203 { 
-      background: #2565E4 !important; 
+      background: #f85706dc !important; 
       margin: 4px;
   } 
   
   li.cat-item.cat-item-197 { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
   li.cat-item.cat-item-155.cat-parent { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
   li.cat-item.cat-item-187.cat-parent { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
   li.cat-item.cat-item-176.cat-parent { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
   li.cat-item.cat-item-190.cat-parent { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
   li.cat-item.cat-item-180.cat-parent { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
@@ -529,7 +522,7 @@
   }     
   
   li.cat-item.cat-item-183.cat-parent { 
-      background: #2565E4 !important; 
+      background: #f85706ea !important; 
       margin: 4px;
   } 
   
@@ -1000,7 +993,7 @@
   }
   
   .price_slider .ui-slider-range {
-    background: #007bff; /* Blue range */
+    background: #f85706ea; /* Blue range */
     height: 100%;
     position: absolute;
     top: 0;
@@ -1012,40 +1005,21 @@
     content: '';
     width: 4px;
     height: 16px;
-    background: #007bff; /* Blue color for grabbers */
+    background: #f85706ea; /* Blue color for grabbers */
     position: absolute;
     top: -6px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
     cursor: grab;
-    border-radius: 5px;
+    border-radius: 0px;
   }
   
 
 
 
 
-  /* products portion ===================================================================== */
-  @font-face { 
-    font-display:swap;
-    font-weight:400;
-    font-style:normal;
-    font-family:"woodmart-font";
-    src:url(https://invertsolar.co.za/wp-content/themes/woodmart/fonts/woodmart-font-2-400.woff2?v=7.2.3) format("woff2");
-  } 
-  @media all{     
-    body {  
-      font:inherit;
-      font-size:100%;
-      background-image:none;
-      color:var(--wd-text-color);
-      font-weight:var(--wd-text-font-weight);
-      font-style:var(--wd-text-font-style);
-      font-family:sans-serif;
-      line-height:1;
-    }  
-  }  
+  /* products portion ===================================================================== */ 
   body { 
   /* CSS Variables that may have been missed get put on body */ 
       --flex-direction:  initial;  
@@ -1313,7 +1287,7 @@
     } 
   
     :root { 
-      --wd-primary-color: #029ef6;
+      --wd-primary-color: #f85706ea;
     } 
   
     :root { 
@@ -1322,11 +1296,11 @@
     } 
   
     :root { 
-      --btn-accented-bgcolor: #029ef6;
+      --btn-accented-bgcolor: #f85706ea;
     } 
   
     :root { 
-      --btn-accented-bgcolor-hover: #029ef6;
+      --btn-accented-bgcolor-hover: #f85706ea;
     } 
   
     :root { 

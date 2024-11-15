@@ -1,5 +1,4 @@
 import "./RightBlock.css"
-import { useEffect, useState } from "react";
 import TopSearchBar from "../TopBar/TopSearchBar/TopSearchBar.jsx";
 import TopNavigation from "../TopBar/TopNavigation/TopNavigation.jsx";
 import AppRoutes from "../../AppRoutes/AppRoutes.jsx";
@@ -11,7 +10,7 @@ function RightBlock() {
 
 
   return (
-    <div className="rightblock">
+    <div style={{width:"100%"}}>
       <TopSearchBar />
       <TopNavigation />
       <AppRoutes />

@@ -19,10 +19,10 @@ function App() {
           newestOnTop
           closeOnClick
         />
-        <div style={{display:"flex"}}>
-        <LeftBar />
+        {/* <div style={{display:"flex", width:"100vw"}}> */}
+        {/* <LeftBar /> */}
+        {/* </div> */}
         <RightBlock />
-        </div>
     </>
   )
 }

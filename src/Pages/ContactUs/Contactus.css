@@ -2181,7 +2181,7 @@
       cursor: pointer; 
       transition: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, opacity .25s ease; 
       color: var(--btn-color, #3E3E3E); 
-      background-color: #049cee !important;
+      background-color: #fc5704df !important;
     } 
   
     .gform-theme--framework input  { 

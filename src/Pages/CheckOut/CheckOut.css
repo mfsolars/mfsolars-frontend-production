@@ -179,7 +179,7 @@
     } 
   
     :root { 
-      --wd-primary-color: #029ef6;
+      --wd-primary-color: #f85606;
     } 
   
     :root { 
@@ -188,11 +188,11 @@
     } 
   
     :root { 
-      --btn-accented-bgcolor: #029ef6;
+      --btn-accented-bgcolor: #f85606;
     } 
   
     :root { 
-      --btn-accented-bgcolor-hover: #029ef6;
+      --btn-accented-bgcolor-hover: #f85606;
     } 
   
     :root { 
@@ -546,7 +546,7 @@
   
   @media all{ 
     .page-title-default { 
-      background-color: #029ef6; 
+      background-color: #f85606; 
       background-image: none; 
       background-size: cover; 
       background-position: center center;

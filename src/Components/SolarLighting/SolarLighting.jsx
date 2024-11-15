@@ -43,9 +43,10 @@ function SolarLighting({ department, moreproducts }) {
 
                 <div className="elementor-element elementor-element-31f0652 elementor-widget__width-auto elementor-widget elementor-widget-wd_button mfsolars0-11-162-168">
                     <div className="elementor-widget-container mfsolars0-12-168-169">
-                        <div className="wd-solarlight-button-wrapper text-left mfsolars0-13-169-170">
+                        <div className="wd-solarlight-button-wrapper text-left mfsolars0-13-169-170" >
                             <Link
-                                className="btn btn-style-default btn-style-round btn-size-default btn-scheme-custom btn-scheme-hover-custom btn-icon-pos-right"
+                                className="moreproducts btn-style-default btn-style-round btn-size-default btn-scheme-custom btn-scheme-hover-custom btn-icon-pos-right"
+
                                 to={moreproducts}
                             >
                                 <span className="wd-solarlight-btn-text mfsolars0-15-171-172 text-slate-100">

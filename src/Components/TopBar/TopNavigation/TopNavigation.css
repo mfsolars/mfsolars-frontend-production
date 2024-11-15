@@ -146,7 +146,7 @@
     } 
   
     :root { 
-      --wd-primary-color: #029ef6;
+      --wd-primary-color: #f85606;
     } 
   
     :root { 
@@ -481,7 +481,8 @@
   }     
   
   #wd-66a0768d5aa52 a  { 
-      background-color: #029ef6;
+      background-color: #f85606 !important;
+      border: 2px solid aliceblue;
   } 
   
   @media all{ 
@@ -587,6 +588,10 @@
       background-color: var(--wd-primary-color); 
       color: #fff; 
       transition: inherit;
+      border: 2px solid aliceblue;
+    } 
+    .wd-tools-element.wd-design-7 > a:active > :is(.wd-tools-inner, .wd-tools-icon)  { 
+      border: none;
     } 
   
     .wd-tools-element:is(.wd-design-6, .wd-design-7):not(.wd-with-wrap) .wd-tools-icon  { 
@@ -890,9 +895,8 @@
     } 
   
     .wd-nav[class*="wd-style-"] > li:is(.current-menu-item, .wd-active, .active) > a  { 
-      color: rgba(0, 0, 0, 0.86) !important;
-      background: aliceblue;
-      border-radius: 50px;
+      color: rgba(0, 0, 0, 0.96) !important;
+      background: transparent !important;
     } 
     .wd-nav[class*="wd-style-"] > li:is(:hover) > a  { 
       color: rgba(0, 0, 0, 0.86) !important;
@@ -915,8 +919,7 @@
     } 
   
     .wd-nav.wd-style-bg > li:is(:hover, .current-menu-item, .wd-active, .active) > a::before { 
-      visibility: visible; 
-      opacity: .25;
+      visibility: hidden; 
     } 
   
     .wd-nav.wd-style-bg > li > a span , .wd-nav.wd-style-bg > li > a::after { 
@@ -1023,5 +1026,5 @@
   }
   
   .dropdown-item:hover {
-    background-color: #029ef6;
+    background-color: #f85606;
   }
